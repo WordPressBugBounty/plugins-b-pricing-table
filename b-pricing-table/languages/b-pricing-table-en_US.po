@@ -1,0 +1,183 @@
+# Copyright (C) 2024 bPlugins
+# This file is distributed under the GPLv3.
+msgid ""
+msgstr ""
+"Project-Id-Version: Pricing Table - Block 1.0.7\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/b-pricing-table\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-08-07T11:20:40+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.8.1\n"
+"X-Domain: b-pricing-table\n"
+
+#. Plugin Name of the plugin
+msgid "Pricing Table - Block"
+msgstr ""
+
+#. Description of the plugin
+msgid "Display product prices as a table"
+msgstr ""
+
+#. Author of the plugin
+msgid "bPlugins"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://bplugins.com"
+msgstr ""
+
+#: build/index.js:1
+msgid "Upload"
+msgstr ""
+
+#: build/index.js:1
+msgid "Link"
+msgstr ""
+
+#: build/index.js:1
+msgid "Auto"
+msgstr ""
+
+#: build/index.js:1
+msgid "Lazy"
+msgstr ""
+
+#: build/index.js:1
+msgid "Eager"
+msgstr ""
+
+#: build/index.js:1
+msgid "General"
+msgstr ""
+
+#: build/index.js:1
+msgid "Style"
+msgstr ""
+
+#: build/index.js:1
+msgid "Add or Remove Prices"
+msgstr ""
+
+#: build/index.js:1
+msgid "Price:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Currency:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Features:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Remove the feature"
+msgstr ""
+
+#: build/index.js:1
+msgid "Add New Feature"
+msgstr ""
+
+#: build/index.js:1
+msgid "Link:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Color:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Remove"
+msgstr ""
+
+#: build/index.js:1
+msgid "Duplicate"
+msgstr ""
+
+#: build/index.js:1
+msgid "Add New Price"
+msgstr ""
+
+#: build/index.js:1
+msgid "Layout Settings"
+msgstr ""
+
+#: build/index.js:1
+msgid "Columns:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Column Gap:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Row Gap:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Pricing Table"
+msgstr ""
+
+#: build/index.js:1
+msgid "Padding:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Shadow:"
+msgstr ""
+
+#: build/index.js:1
+msgid "Period"
+msgstr ""
+
+#: build/index.js:1
+msgid "Plan Name"
+msgstr ""
+
+#: build/index.js:1
+msgid "Link Label"
+msgstr ""
+
+#: build/block.json
+msgctxt "block title"
+msgid "Pricing Table"
+msgstr ""
+
+#: build/block.json
+msgctxt "block description"
+msgid "Display product prices as a table."
+msgstr ""
+
+#: build/block.json
+msgctxt "block keyword"
+msgid "pricing"
+msgstr ""
+
+#: build/block.json
+msgctxt "block keyword"
+msgid "price list"
+msgstr ""
+
+#: build/block.json
+msgctxt "block keyword"
+msgid "table"
+msgstr ""
+
+#: build/block.json
+msgctxt "block style label"
+msgid "Basic"
+msgstr ""
+
+#: build/block.json
+msgctxt "block style label"
+msgid "Standard"
+msgstr ""
+
+#: build/block.json
+msgctxt "block style label"
+msgid "Ultimate"
+msgstr ""

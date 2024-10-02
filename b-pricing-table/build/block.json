@@ -1,0 +1,189 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "bptb/pricing-table",
+  "title": "Pricing Table",
+  "description": "Display product prices as a table.",
+  "category": "widgets",
+  "keywords": [
+    "pricing",
+    "price list",
+    "table"
+  ],
+  "version": "1.0.7",
+  "textdomain": "b-pricing-table",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": ""
+    },
+    "pricingTables": {
+      "type": "array",
+      "default": [
+        {
+          "name": "Basic",
+          "price": 2.99,
+          "priceCurrency": "$",
+          "period": "Month",
+          "link": "#",
+          "linkLabel": "Enroll Now",
+          "color": "#f00025",
+          "features": [
+            {
+              "isEnable": true,
+              "label": "25GB Disk Space"
+            },
+            {
+              "isEnable": true,
+              "label": "25 Email Accounts"
+            },
+            {
+              "isEnable": true,
+              "label": "50GB Bandwidth"
+            },
+            {
+              "isEnable": true,
+              "label": "25 Subdomains"
+            },
+            {
+              "isEnable": false,
+              "label": "Maintenance"
+            }
+          ]
+        },
+        {
+          "name": "Standard",
+          "price": 5.99,
+          "priceCurrency": "$",
+          "period": "Month",
+          "link": "#",
+          "linkLabel": "Enroll Now",
+          "color": "#001645",
+          "features": [
+            {
+              "isEnable": true,
+              "label": "50GB Disk Space"
+            },
+            {
+              "isEnable": true,
+              "label": "50 Email Accounts"
+            },
+            {
+              "isEnable": true,
+              "label": "100GB Bandwidth"
+            },
+            {
+              "isEnable": true,
+              "label": "50 Subdomains"
+            },
+            {
+              "isEnable": false,
+              "label": "Maintenance"
+            }
+          ]
+        },
+        {
+          "name": "Premium",
+          "price": 9.99,
+          "priceCurrency": "$",
+          "period": "Month",
+          "link": "#",
+          "linkLabel": "Enroll Now",
+          "color": "#01944e",
+          "features": [
+            {
+              "isEnable": true,
+              "label": "100GB Disk Space"
+            },
+            {
+              "isEnable": true,
+              "label": "100 Email Accounts"
+            },
+            {
+              "isEnable": true,
+              "label": "Unlimited Bandwidth"
+            },
+            {
+              "isEnable": true,
+              "label": "100 Subdomains"
+            },
+            {
+              "isEnable": true,
+              "label": "Maintenance"
+            }
+          ]
+        }
+      ]
+    },
+    "columns": {
+      "type": "object",
+      "default": {
+        "desktop": 3,
+        "tablet": 2,
+        "mobile": 1
+      }
+    },
+    "columnGap": {
+      "type": "string",
+      "default": "20px"
+    },
+    "rowGap": {
+      "type": "string",
+      "default": "30px"
+    },
+    "textAlign": {
+      "type": "string",
+      "default": "center"
+    },
+    "padding": {
+      "type": "object",
+      "default": {
+        "vertical": "35px",
+        "horizontal": "25px"
+      }
+    },
+    "shadow": {
+      "type": "object",
+      "default": {
+        "blur": "30px",
+        "color": "#6e8faf4d"
+      }
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false
+  },
+  "styles": [
+    {
+      "name": "basic",
+      "label": "Basic",
+      "isDefault": true
+    },
+    {
+      "name": "standard",
+      "label": "Standard"
+    },
+    {
+      "name": "ultimate",
+      "label": "Ultimate"
+    }
+  ],
+  "example": {
+    "attributes": {
+      "columns": {
+        "desktop": 1,
+        "tablet": 1,
+        "mobile": 1
+      }
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./view.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}
