@@ -132,31 +132,3 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 = 1.0.0 =
 * Initial Release
-
-
-== Upgrade Notice ==
-
-= 1.0.7 =
-* Fix icon size issue
-
-= 1.0.6 =
-* Reduce assets load
-
-= 1.0.5 =
-* Add translate feature
-
-= 1.0.4 =
-* Fix content render issue
-
-= 1.0.3 =
-* Reduce PHP Code
-* Performance Improvement
-
-= 1.0.2 =
-* Reduce PHP Code
-
-= 1.0.1 =
-* performance improvement
-
-= 1.0.0 =
-* Initial Release
