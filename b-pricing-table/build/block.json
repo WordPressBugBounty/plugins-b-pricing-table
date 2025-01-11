@@ -10,7 +10,6 @@
     "price list",
     "table"
   ],
-  "version": "1.0.7",
   "textdomain": "b-pricing-table",
   "attributes": {
     "align": {

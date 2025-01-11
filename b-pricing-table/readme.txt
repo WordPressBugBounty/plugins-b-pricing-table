@@ -2,9 +2,9 @@
 Contributors: bplugins, abuhayat, charlescormier
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, pricing, price list, table, Gutenberg block
-Requires at least: 6.2+
+Requires at least: 6.5+
 Tested up to: 6.7.1
-Stable tag: 1.0.7
+Stable tag: 1.0.8
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -107,6 +107,9 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Changelog ==
+
+= 1.0.8 =
+* Fix not able to write in RichText
 
 = 1.0.7 =
 * Fix icon size issue

@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Pricing Table - Block
  * Description: Display product prices as a table
- * Version: 1.0.7
+ * Version: 1.0.8
  * Author: bPlugins
  * Author URI: https://bplugins.com
  * License: GPLv3
@@ -14,7 +14,7 @@
 if ( !defined( 'ABSPATH' ) ) { exit; }
 
 // Constant
-define( 'BPTB_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.0.7' );
+define( 'BPTB_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.0.8' );
 
 if( !class_exists( 'BPTBPlugin' ) ){
 	class BPTBPlugin{
