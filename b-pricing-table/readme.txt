@@ -3,7 +3,7 @@ Contributors: bplugins, abuhayat, charlescormier
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, pricing, price list, table, Gutenberg block
 Requires at least: 6.5+
-Tested up to: 6.7.1
+Tested up to: 6.8.1
 Stable tag: 1.0.8
 Requires PHP: 7.1
 License: GPLv3 or later
@@ -131,7 +131,7 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 * Reduce PHP Code
 
 = 1.0.1 =
-* performance improvement
+* performance improvement.
 
 = 1.0.0 =
 * Initial Release
