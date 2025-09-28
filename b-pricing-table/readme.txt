@@ -1,10 +1,10 @@
-=== Pricing Table block - Display product prices as a table. ===
-Contributors: bplugins, abuhayat, charlescormier
+=== Pricing Table Block – Show Product or Service Pricing in Table Format ===
+Contributors: bplugins, abuhayat, charlescormier, tomorbplugins, freemius
 Donate link: https://www.buymeacoffee.com/abuhayat
-Tags: block, pricing, price list, table, Gutenberg block
+Tags: block, pricing table, price list, pricing block, product pricing
 Requires at least: 6.5+
-Tested up to: 6.8.1
-Stable tag: 1.0.8
+Tested up to: 6.8
+Stable tag: 2.0.0
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -13,14 +13,46 @@ Create and display product professional-looking pricing table in WordPress.
 
 == Description ==
 
-Create and display product professional-looking pricing tables in WordPress's block editor. This is a block plugin and it will only work with the Gutenberg editor. 
+Pricing Table Block is a modern and lightweight WordPress plugin that allows you to design and display fully customizable pricing tables directly within the Gutenberg editor. Perfect for SaaS, product pages, service-based websites, freelancers, and agencies, this plugin helps you create transformative pricing tables.
 
 
 **[Demos](https://bblockswp.com/demo/pricing-table/)**
 
 
-= Features =
-- **Fully Customizable**: All the options you need to arrange the showcase to your liking are available here.
+### Key Features – Free Version
+
+- **Unlimited Add Pricing Table**: Add pricing tables using the Gutenberg block editor.
+
+- **Basic Styling Options**: Customize colors, fonts, borders, and backgrounds to match your brand.
+
+- **Feature List with Icons**: Display service features clearly with styled checkmark icons.
+
+- **Button Support**: Add call-to-action buttons with custom text and links to drive conversions.
+
+- **Responsive by Default**: Mobile-friendly layout that works across desktops, tablets, and phones.
+
+- **Optimized for Performance**: Lightweight code ensures fast loading and smooth user experience.
+
+- **Gutenberg Block Support**: Build pricing tables visually using WordPress’s  block editor.
+
+
+### Pricing Table Pro – Unlock Premium Features
+
+Take your pricing tables to the next level with powerful design and control features in the Pro version.
+
+**What’s New in the Pro Version?**
+
+- **5 Professionally Designed Styles**: Choose from Five unique, modern pricing table templates — crafted to fit any brand and maximize conversions.
+
+- **Responsive Device-Based Controls**: Individually adjust layout, spacing, and styles for desktop, tablet, and mobile.
+
+- **Custom Styling Options**: Control border radius, background colors, shadows, padding, and image positioning — style your tables your way.
+
+- **Advanced Typography**: Fully customize the font, size, weight, color, and alignment of your pricing titles, descriptions, and features.
+
+- **Interactive Buttons**: Design call-to-action buttons with custom icons, sizes, colors, and hover effects that enhance engagement.
+
+- **Flexible Layout Controls**: Manage the number of columns, control the gaps, fine-tune padding, and adjust container width for a pixel-perfect layout.
 
 
 = How to use =
@@ -36,24 +68,24 @@ Create and display product professional-looking pricing tables in WordPress's bl
 - Did you like this plugin? Dislike it? Do you have a feature request? [Please share your feedback with us](mailto:support@bplugins.com 'Send feedback')
 
 
-### ⭐ Check out the Parent Plugin of this plugin-
+### Check out the Parent Plugin of this plugin-
 
-🔥 **[B Blocks](https://bblockswp.com)** – Best gutenberg blocks collections for WordPress.
+[**B Blocks**](https://bblockswp.com) – A blocks collection and page building tool for Gutenberg.
 
 
-### ⭐ Check out our other WordPress Plugins-
+### Check out our other WordPress Plugins-
 
-🔥 **[Html5 Audio Player](https://bplugins.com/products/html5-audio-player)** – Best audio player plugin for WordPress.
+[**Html5 Video Player**](https://bplugins.com/products/html5-video-player/) – Display videos as single and playlist in multiple skins.
 
-🔥 **[Html5 Video Player](https://bplugins.com/products/html5-video-player)** – Best video player plugin for WordPress.
+[**PDF Poster**](https://bplugins.com/products/pdf-poster/) – Display/Embed PDF files with different styles.
 
-🔥 **[PDF Poster](https://bplugins.com/products/pdf-poster)** – A fully-featured PDF Viewer Plugin for WordPress.
+[**Html5 Audio Player**](https://bplugins.com/products/html5-audio-player/) – Listen audios with awesome visuals.
 
-🔥 **[Document Embedder](https://bplugins.com/products/document-embedder)** – Best WordPress Document Embedder Plugin.
+[**StreamCast**](https://bplugins.com/products/streamcast-radio-player/) – Customizable radio player with different skins.
 
-🔥 **[3D Viewer](https://bplugins.com/products/3d-viewer)** – Display interactive 3D models on the webs.
+[**3D Viewer**](https://bplugins.com/products/3d-viewer/) – Embed 3D models and 3D products with interaction.
 
-🔥 **[Advanced Post Block](https://bplugins.com/products/advanced-post-block)** – Best Post Display Plugin for WordPress.
+[**Advanced Post Block**](https://bplugins.com/products/advanced-post-block/) – Show posts and custom posts in different layouts.
 
 
 == Installation ==
@@ -76,9 +108,6 @@ Create and display product professional-looking pricing tables in WordPress's bl
 
 == Frequently Asked Questions ==
 
-= Is B Pricing Table free? =
-
-Yes, B Pricing Table is a free Gutenberg block plugin.
 
 = Does it work with any WordPress theme? =
 
@@ -88,25 +117,41 @@ Yes, it will work with any standard WordPress theme.
 
 Yes, you can change block settings from the Gutenberg block editor's right sidebar.
 
+= Can I add unlimited pricing tables? =
+
+Yes. There is no restriction on the number of pricing tables you can add.
+
 = How many times can I reuse a block? =
 
 You can use unlimited times as you want.
+
+= Is the plugin translation-ready? =
+
+Yes, it's fully localized and translation-ready.
 
 = Where can I get support? =
 
 You can post your questions on the [support forum here](https://wordpress.org/support/plugin/b-pricing-table/)
 
-
 == Screenshots ==
 
-1. Default/Basic Style
-2. Standard Style
-3. Ultimate Style
-4. Backend View
-5. Settings
+1. Default Basic Preview
+2. Default Standard Preview
+3. Default Ultimate Preview
+4. Horizontal Preview
+5. Minimal Preview
+6. Dark Preview
+7. Switchable Preview
+8. Dark Minimalist Preview
+9. Gutenberg Block
+10. Gutenberg Block Genaral Settings
+11. Gutenberg Block Style Settings
 
 
 == Changelog ==
+
+= 2.0.0 =
+* Added New Five Style 
 
 = 1.0.8 =
 * Fix not able to write in RichText
@@ -131,7 +176,7 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 * Reduce PHP Code
 
 = 1.0.1 =
-* performance improvement.
+* performance improvement
 
 = 1.0.0 =
 * Initial Release
