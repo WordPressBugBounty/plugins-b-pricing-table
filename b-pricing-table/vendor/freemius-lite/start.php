@@ -1,5 +1,5 @@
 <?php
-$this_sdk_version = '2.1.1';
+$this_sdk_version = '2.1.3';
 
 if (!class_exists('BPluginsFSLite')) {
     require_once(dirname(__FILE__) . '/require.php');

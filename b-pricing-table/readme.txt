@@ -1,10 +1,10 @@
 === Pricing Table Block – Show Product or Service Pricing in Table Format ===
-Contributors: bplugins, abuhayat, charlescormier, tomorbplugins, freemius
+Contributors: bplugins, abuhayat, tomorbplugins, freemius
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, pricing table, price list, pricing block, product pricing
 Requires at least: 6.5+
-Tested up to: 6.8
-Stable tag: 2.0.0
+Tested up to: 6.9
+Stable tag: 2.0.2
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -16,7 +16,7 @@ Create and display product professional-looking pricing table in WordPress.
 Pricing Table Block is a modern and lightweight WordPress plugin that allows you to design and display fully customizable pricing tables directly within the Gutenberg editor. Perfect for SaaS, product pages, service-based websites, freelancers, and agencies, this plugin helps you create transformative pricing tables.
 
 
-**[Demos](https://bblockswp.com/demo/pricing-table/)**
+**[Demos](https://bplugins.com/products/b-pricing-table/)**
 
 
 ### Key Features – Free Version
@@ -42,7 +42,7 @@ Take your pricing tables to the next level with powerful design and control feat
 
 **What’s New in the Pro Version?**
 
-- **5 Professionally Designed Styles**: Choose from Five unique, modern pricing table templates — crafted to fit any brand and maximize conversions.
+- ** 5 Professionally Designed Styles**: Choose from five unique, modern pricing table templates — crafted to fit any brand and maximize conversions.
 
 - **Responsive Device-Based Controls**: Individually adjust layout, spacing, and styles for desktop, tablet, and mobile.
 
@@ -150,8 +150,16 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 == Changelog ==
 
+= 2.0.2 =
+* Card bug fixed
+* Updated freemius sdk
+
+= 2.0.1 =
+* Text overlap issue fixed
+* Currency exchange issue fixed
+
 = 2.0.0 =
-* Added New Five Style 
+* Added New Five Style
 
 = 1.0.8 =
 * Fix not able to write in RichText

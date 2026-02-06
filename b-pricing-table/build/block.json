@@ -5,7 +5,7 @@
   "title": "Pricing Table",
   "description": "Display product prices as a table.",
   "category": "widgets",
-  "version": "2.0.0",
+  "version": "2.0.2",
   "keywords": [
     "pricing",
     "price list",
@@ -55,11 +55,117 @@
         }
       ]
     },
+    "cyclesStyle": {
+      "type": "object",
+      "default": {
+        "width": "35%",
+        "border": {
+          "color": "#11d67400",
+          "width": "1px",
+          "style": "solid"
+        },
+        "normal": {
+          "bgColor": "#f3f4f6"
+        },
+        "active": {
+          "typo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 600,
+            "fontSize": {
+              "desktop": 17,
+              "tablet": 17,
+              "mobile": 17
+            },
+            "fontStyle": "normal",
+            "textTransform": "none",
+            "textDecoration": "auto",
+            "lineHeight": "25px",
+            "letterSpace": "0px"
+          },
+          "bgColor": "#0ea5e9",
+          "color": "#ffffff",
+          "shadow": {
+            "color": "rgba(0, 0, 0, 0.05)",
+            "hOffset": "0px",
+            "vOffset": "1px",
+            "blur": "2px",
+            "spreed": "0px",
+            "isInset": false
+          }
+        },
+        "inActive": {
+          "bgColor": "#e5e7eb",
+          "color": "#4b5563",
+          "typo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 600,
+            "fontSize": {
+              "desktop": 17,
+              "tablet": 17,
+              "mobile": 17
+            },
+            "fontStyle": "normal",
+            "textTransform": "none",
+            "textDecoration": "auto",
+            "lineHeight": "25px",
+            "letterSpace": "0px"
+          }
+        },
+        "discount": {
+          "typo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 600,
+            "fontSize": {
+              "desktop": 17,
+              "tablet": 17,
+              "mobile": 17
+            },
+            "fontStyle": "normal",
+            "textTransform": "none",
+            "textDecoration": "auto",
+            "lineHeight": "25px",
+            "letterSpace": "0px"
+          },
+          "background": {
+            "type": "linear",
+            "radialType": "circle",
+            "colors": [
+              {
+                "color": "rgb(77, 137, 249)",
+                "position": 1.21
+              },
+              {
+                "color": "rgb(112, 78, 231)",
+                "position": 21.78
+              },
+              {
+                "color": "rgb(232, 66, 140)",
+                "position": 71.65
+              },
+              {
+                "color": "rgb(237, 109, 75)",
+                "position": 100
+              }
+            ],
+            "centerPositions": {
+              "x": 50,
+              "y": 50
+            },
+            "angel": 270
+          }
+        }
+      }
+    },
     "pricingTables": {
       "type": "array",
       "default": [
         {
           "name": "Basic",
+          "nameSubtitle": "Perfect for beginners",
+          "isSubtitle": false,
           "nameIcon": {
             "enabled": true,
             "icon": "<svg fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path d=\"M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 0 0 .95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 0 0-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 0 0-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 0 0-.363-1.118L2.576 10.1c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 0 0 .951-.69l1.519-4.674z\"/></svg>"
@@ -114,6 +220,8 @@
         },
         {
           "name": "Standard",
+          "nameSubtitle": "Full professional package",
+          "isSubtitle": false,
           "nameIcon": {
             "enabled": true,
             "icon": "<svg fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path d=\"M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 0 0 .95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 0 0-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 0 0-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 0 0-.363-1.118L2.576 10.1c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 0 0 .951-.69l1.519-4.674z\"/></svg>"
@@ -197,6 +305,8 @@
         },
         {
           "name": "Premium",
+          "nameSubtitle": "Great for growing teams",
+          "isSubtitle": false,
           "nameIcon": {
             "enabled": true,
             "icon": "<svg fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path d=\"M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 0 0 .95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 0 0-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 0 0-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 0 0-.363-1.118L2.576 10.1c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 0 0 .951-.69l1.519-4.674z\"/></svg>"
@@ -303,11 +413,11 @@
             "tablet": 12,
             "mobile": 12
           },
-          "fontStyle": "normal",
-          "textTransform": "none",
-          "textDecoration": "auto",
-          "lineHeight": "25px",
-          "letterSpace": "0px"
+          "fontStyle": "",
+          "textTransform": "",
+          "textDecoration": "",
+          "lineHeight": "",
+          "letterSpace": ""
         },
         "popularRadius": {
           "top": "4px",
@@ -389,104 +499,6 @@
       "default": {
         "blur": "30px",
         "color": "#6e8faf4d"
-      }
-    },
-    "cyclesStyle": {
-      "type": "object",
-      "default": {
-        "normal": {
-          "bgColor": "#f3f4f6"
-        },
-        "active": {
-          "typo": {
-            "fontFamily": "Manrope",
-            "fontCategory": "sans-serif",
-            "fontWeight": 600,
-            "fontSize": {
-              "desktop": 17,
-              "tablet": 17,
-              "mobile": 17
-            },
-            "fontStyle": "normal",
-            "textTransform": "none",
-            "textDecoration": "auto",
-            "lineHeight": "25px",
-            "letterSpace": "0px"
-          },
-          "bgColor": "#0ea5e9",
-          "color": "#ffffff",
-          "shadow": {
-            "color": "rgba(0, 0, 0, 0.05)",
-            "hOffset": "0px",
-            "vOffset": "1px",
-            "blur": "2px",
-            "spreed": "0px",
-            "isInset": false
-          }
-        },
-        "inActive": {
-          "bgColor": "#e5e7eb",
-          "color": "#4b5563",
-          "typo": {
-            "fontFamily": "Manrope",
-            "fontCategory": "sans-serif",
-            "fontWeight": 600,
-            "fontSize": {
-              "desktop": 17,
-              "tablet": 17,
-              "mobile": 17
-            },
-            "fontStyle": "normal",
-            "textTransform": "none",
-            "textDecoration": "auto",
-            "lineHeight": "25px",
-            "letterSpace": "0px"
-          }
-        },
-        "discount": {
-          "typo": {
-            "fontFamily": "Manrope",
-            "fontCategory": "sans-serif",
-            "fontWeight": 600,
-            "fontSize": {
-              "desktop": 17,
-              "tablet": 17,
-              "mobile": 17
-            },
-            "fontStyle": "normal",
-            "textTransform": "none",
-            "textDecoration": "auto",
-            "lineHeight": "25px",
-            "letterSpace": "0px"
-          },
-          "background": {
-            "type": "linear",
-            "radialType": "circle",
-            "colors": [
-              {
-                "color": "rgb(77, 137, 249)",
-                "position": 1.21
-              },
-              {
-                "color": "rgb(112, 78, 231)",
-                "position": 21.78
-              },
-              {
-                "color": "rgb(232, 66, 140)",
-                "position": 71.65
-              },
-              {
-                "color": "rgb(237, 109, 75)",
-                "position": 100
-              }
-            ],
-            "centerPositions": {
-              "x": 50,
-              "y": 50
-            },
-            "angel": 270
-          }
-        }
       }
     },
     "styles": {
@@ -607,6 +619,32 @@
         },
         "nameIconSize": "20px",
         "nameIconColor": "#a1a1aa",
+        "subNameColor": "#ffffff",
+        "subNameTypo": {
+          "fontFamily": "Manrope",
+          "fontCategory": "sans-serif",
+          "fontWeight": 400,
+          "fontSize": {
+            "desktop": 14,
+            "tablet": 14,
+            "mobile": 14
+          }
+        },
+        "currencyTypo": {
+          "fontFamily": "Default",
+          "fontCategory": "system-ui",
+          "fontWeight": 700,
+          "fontSize": {
+            "desktop": 22,
+            "tablet": 22,
+            "mobile": 22
+          },
+          "fontStyle": "",
+          "textTransform": "",
+          "textDecoration": "",
+          "lineHeight": "",
+          "letterSpace": ""
+        },
         "amountTypo": {
           "fontFamily": "Manrope",
           "fontCategory": "sans-serif",
@@ -616,11 +654,11 @@
             "tablet": 33,
             "mobile": 33
           },
-          "fontStyle": "normal",
-          "textTransform": "none",
-          "textDecoration": "auto",
-          "lineHeight": "48px",
-          "letterSpace": "0px"
+          "fontStyle": "",
+          "textTransform": "",
+          "textDecoration": "",
+          "lineHeight": "",
+          "letterSpace": ""
         },
         "amountColor": "#000000",
         "amountMarging": {
@@ -652,11 +690,11 @@
             "tablet": 22,
             "mobile": 22
           },
-          "fontStyle": "normal",
-          "textTransform": "none",
-          "textDecoration": "auto",
-          "lineHeight": "25px",
-          "letterSpace": "0px"
+          "fontStyle": "",
+          "textTransform": "",
+          "textDecoration": "",
+          "lineHeight": "",
+          "letterSpace": ""
         },
         "periodColor": "#6b7280",
         "periodMargin": {
@@ -689,11 +727,11 @@
             "tablet": 20,
             "mobile": 20
           },
-          "fontStyle": "normal",
-          "textTransform": "none",
-          "textDecoration": "auto",
-          "lineHeight": "25px",
-          "letterSpace": "0px"
+          "fontStyle": "",
+          "textTransform": "",
+          "textDecoration": "",
+          "lineHeight": "",
+          "letterSpace": ""
         },
         "desColor": "#6b7280",
         "desMargin": {
@@ -829,6 +867,7 @@
           "uncheckHight": ""
         },
         "buttonStyle": {
+          "buttonWidth": "66%",
           "padding": {
             "desktop": {
               "top": "13px",
@@ -858,11 +897,11 @@
               "tablet": 16,
               "mobile": 16
             },
-            "fontStyle": "normal",
-            "textTransform": "none",
-            "textDecoration": "auto",
-            "lineHeight": "25px",
-            "letterSpace": "0px"
+            "fontStyle": "",
+            "textTransform": "",
+            "textDecoration": "",
+            "lineHeight": "",
+            "letterSpace": ""
           },
           "color": "white",
           "hoverTextColor": "white",
@@ -972,11 +1011,11 @@
               "tablet": 24,
               "mobile": 24
             },
-            "fontStyle": "normal",
-            "textTransform": "none",
-            "textDecoration": "auto",
-            "lineHeight": "25px",
-            "letterSpace": "0px"
+            "fontStyle": "",
+            "textTransform": "",
+            "textDecoration": "",
+            "lineHeight": "",
+            "letterSpace": ""
           },
           "titleColor": "#FFFFFF",
           "titleMargin": {
@@ -999,6 +1038,32 @@
               "left": "0px"
             }
           },
+          "subTitleColor": "#ffffff",
+          "subTitleTypo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 400,
+            "fontSize": {
+              "desktop": 14,
+              "tablet": 14,
+              "mobile": 14
+            }
+          },
+          "currencyTypo": {
+            "fontFamily": "Default",
+            "fontCategory": "system-ui",
+            "fontWeight": 700,
+            "fontSize": {
+              "desktop": 22,
+              "tablet": 22,
+              "mobile": 22
+            },
+            "fontStyle": "",
+            "textTransform": "",
+            "textDecoration": "",
+            "lineHeight": "",
+            "letterSpace": ""
+          },
           "amountTypo": {
             "fontFamily": "Manrope",
             "fontCategory": "sans-serif",
@@ -1008,11 +1073,11 @@
               "tablet": 33,
               "mobile": 33
             },
-            "fontStyle": "normal",
-            "textTransform": "none",
-            "textDecoration": "auto",
-            "lineHeight": "48px",
-            "letterSpace": "0px"
+            "fontStyle": "",
+            "textTransform": "",
+            "textDecoration": "",
+            "lineHeight": "",
+            "letterSpace": ""
           },
           "amountColor": "white",
           "priceMarging": {
@@ -1044,11 +1109,11 @@
               "tablet": 22,
               "mobile": 22
             },
-            "fontStyle": "normal",
-            "textTransform": "none",
-            "textDecoration": "auto",
-            "lineHeight": "25px",
-            "letterSpace": "0px"
+            "fontStyle": "",
+            "textTransform": "",
+            "textDecoration": "",
+            "lineHeight": "",
+            "letterSpace": ""
           },
           "periodColor": "#edeff1",
           "periodMargin": {
@@ -1082,11 +1147,11 @@
               "tablet": 20,
               "mobile": 20
             },
-            "fontStyle": "normal",
-            "textTransform": "none",
-            "textDecoration": "auto",
-            "lineHeight": "100%",
-            "letterSpace": "0px"
+            "fontStyle": "",
+            "textTransform": "",
+            "textDecoration": "",
+            "lineHeight": "",
+            "letterSpace": ""
           },
           "desMargin": {
             "desktop": {
@@ -1193,6 +1258,7 @@
             "checkmarkWidth": "20px"
           },
           "buttonStyle": {
+            "buttonWidth": "66%",
             "typo": {
               "fontFamily": "Manrope",
               "fontCategory": "sans-serif",
@@ -1202,11 +1268,11 @@
                 "tablet": 16,
                 "mobile": 16
               },
-              "fontStyle": "normal",
-              "textTransform": "none",
-              "textDecoration": "auto",
-              "lineHeight": "25px",
-              "letterSpace": "0px"
+              "fontStyle": "",
+              "textTransform": "",
+              "textDecoration": "",
+              "lineHeight": "",
+              "letterSpace": ""
             },
             "color": "#2563eb",
             "textHoverColor": "#2563eb",
@@ -1292,7 +1358,7 @@
     "wp-api"
   ],
   "editorStyle": "file:./index.css",
-  "style": "file:./view.css",
   "render": "file:./render.php",
+  "style": "file:./view.css",
   "viewScript": "file:./view.js"
 }
