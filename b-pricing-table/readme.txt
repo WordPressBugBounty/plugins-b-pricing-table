@@ -9,7 +9,7 @@ Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Create and display product professional-looking pricing table in WordPress.
+Create and display a professional-looking product pricing table in WordPress.
 
 == Description ==
 
