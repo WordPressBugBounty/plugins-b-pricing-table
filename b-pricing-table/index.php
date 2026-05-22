@@ -3,10 +3,10 @@
 /**
  * Plugin Name: Pricing Table - Block
  * Description: Display product prices as a table
- * Version: 2.0.2
+ * Version: 2.0.3
  * Author: bPlugins
  * Author URI: https://bplugins.com
- * License: GPLv3
+ * License: GPLv3 or later
  * License URI: https://www.gnu.org/licenses/gpl-3.0.txt
  * Text Domain: b-pricing-table
  */
@@ -16,7 +16,7 @@ if ( !defined( 'ABSPATH' ) ) {
 if ( function_exists( 'bptb_fs' ) ) {
     bptb_fs()->set_basename( false, __FILE__ );
 } else {
-    define( 'BPTB_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '2.0.2' ) );
+    define( 'BPTB_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '2.0.3' ) );
     define( 'BPTB_DIR_URL', plugin_dir_url( __FILE__ ) );
     define( 'BPTB_DIR_PATH', plugin_dir_path( __FILE__ ) );
     define( 'BPTB_HAS_PRO', file_exists( dirname( __FILE__ ) . '/vendor/freemius/start.php' ) );
@@ -68,14 +68,17 @@ if ( function_exists( 'bptb_fs' ) ) {
     } else {
         require_once BPTB_DIR_PATH . 'includes/admin/AdminMenu.php';
     }
+    if ( BPTB_HAS_PRO && file_exists( BPTB_DIR_PATH . 'includes/admin/LicenseActivation.php' ) ) {
+        require_once BPTB_DIR_PATH . 'includes/admin/LicenseActivation.php';
+    }
     if ( !class_exists( "BPTBPlugin" ) ) {
         class BPTBPlugin {
             function __construct() {
-                add_action( 'init', [$this, 'onInit'] );
+                add_action( 'init', [$this, 'bptbOnInit'] );
                 add_action( 'enqueue_block_editor_assets', [$this, 'bptbEnqueueBlockEditorAssets'] );
             }
 
-            function onInit() {
+            function bptbOnInit() {
                 register_block_type( __DIR__ . '/build' );
             }
 

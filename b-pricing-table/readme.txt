@@ -1,13 +1,13 @@
-=== Pricing Table Block – Show Product or Service Pricing in Table Format ===
+=== Pricing Table - Block – Show Product or Service Pricing in Table Format ===
 Contributors: bplugins, abuhayat, tomorbplugins, freemius
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, pricing table, price list, pricing block, product pricing
 Requires at least: 6.5+
-Tested up to: 6.9
-Stable tag: 2.0.2
-Requires PHP: 7.1
+Tested up to: 7.0
+Stable tag: 2.0.3
+Requires PHP: 7.4
 License: GPLv3 or later
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
+License URI: http://www.gnu.org/licenses/gpl-3.0.html 
 
 Create and display a professional-looking product pricing table in WordPress.
 
@@ -16,7 +16,7 @@ Create and display a professional-looking product pricing table in WordPress.
 Pricing Table Block is a modern and lightweight WordPress plugin that allows you to design and display fully customizable pricing tables directly within the Gutenberg editor. Perfect for SaaS, product pages, service-based websites, freelancers, and agencies, this plugin helps you create transformative pricing tables.
 
 
-**[Demos](https://bplugins.com/products/b-pricing-table/)**
+**[Pricing Table](https://bplugins.com/products/b-pricing-table/) | [Live Demo](https://bblockswp.com/demo/pricing-table-block-all-demos/) | [Support](https://bplugins.com/support/)**
 
 
 ### Key Features – Free Version
@@ -38,11 +38,11 @@ Pricing Table Block is a modern and lightweight WordPress plugin that allows you
 
 ### Pricing Table Pro – Unlock Premium Features
 
-Take your pricing tables to the next level with powerful design and control features in the Pro version.
+Take your pricing tables to the next level with powerful design and control feature in the Pro version.
 
 **What’s New in the Pro Version?**
 
-- ** 5 Professionally Designed Styles**: Choose from five unique, modern pricing table templates — crafted to fit any brand and maximize conversions.
+- **5 Professionally Designed Styles**: Choose from Five unique, modern pricing table templates — crafted to fit any brand and maximize conversions.
 
 - **Responsive Device-Based Controls**: Individually adjust layout, spacing, and styles for desktop, tablet, and mobile.
 
@@ -86,6 +86,35 @@ Take your pricing tables to the next level with powerful design and control feat
 [**3D Viewer**](https://bplugins.com/products/3d-viewer/) – Embed 3D models and 3D products with interaction.
 
 [**Advanced Post Block**](https://bplugins.com/products/advanced-post-block/) – Show posts and custom posts in different layouts.
+
+
+== External Services ==
+
+This plugin connects to the following external services from the admin dashboard:
+
+= bPlugins API =
+
+* **Service URL:** [https://api.bplugins.com](https://api.bplugins.com)
+* **Purpose:** The plugin's admin dashboard fetches product comparison data and pricing information to display relevant upgrade options and feature details.
+* **Data Sent:** Only the plugin slug is transmitted; no personal or site data is collected.
+* **Terms of Service:** [https://bplugins.com/terms-of-service/](https://bplugins.com/terms-of-service/)
+* **Privacy Policy:** [https://bplugins.com/privacy-policy/](https://bplugins.com/privacy-policy/)
+
+= WordPress.org Plugins API =
+
+* **Service URL:** [https://api.wordpress.org/plugins/info/1.2/](https://api.wordpress.org/plugins/info/1.2/)
+* **Purpose:** The admin dashboard queries the official WordPress.org Plugins API to retrieve and display a curated list of other plugins by the same author ("Our Plugins" section).
+* **Data Sent:** Plugin slugs and author name; no personal or site data is collected.
+* **Terms of Service:** [https://wordpress.org/about/tos/](https://wordpress.org/about/tos/)
+* **Privacy Policy:** [https://wordpress.org/about/privacy/](https://wordpress.org/about/privacy/)
+
+= Third-Party Libraries / bpl tools =
+
+* **Source / GitHub:** https://github.com/bPlugins/bpl-tools
+* **License:** GPL-2.0-or-later – https://www.gnu.org/licenses/gpl-2.0.html
+* **Purpose:** Shared utility library providing admin dashboard components and common Gutenberg editor controls.
+* **External Services:** The library may connect to bPlugins, WordPress.org, and Freemius services for product data and checkout functionality. See full details: https://github.com/bPlugins/bpl-tools#external-requests--why-they-are-made
+
 
 
 == Installation ==
@@ -149,6 +178,12 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Changelog ==
+
+= 2.0.3 – 22 May 2026 =
+* Admin dashborad updated
+* Card style bug fixed
+* Toggle new style added
+* Shotcode ui updated
 
 = 2.0.2 =
 * Card bug fixed

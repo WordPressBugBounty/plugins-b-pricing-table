@@ -26,8 +26,8 @@ if( !class_exists( 'BPTBAdminMenu' ) ) {
 					'version' => BPTB_VERSION,
 					'isPremium' => bptbIsPremium(),
 					'hasPro' => BPTB_HAS_PRO,
-					'adminUrl' => admin_url(),
-					'upgradeUrl' => function_exists('fs_get_upgrade_url') ? fs_get_upgrade_url() : ''
+          'adminUrl' => admin_url(),
+          'licenseActiveNonce' => wp_create_nonce( 'bptbLicenseActivation' )
 				] ) ); ?>'
 			></div>
 		<?php }
@@ -35,7 +35,7 @@ if( !class_exists( 'BPTBAdminMenu' ) ) {
 		function bptbAdminEnqueueScripts( $hook ) {
 			if( strpos( $hook, 'b-pricing-table' ) ){
 				wp_enqueue_style( 'bptb-admin-dashboard', BPTB_DIR_URL . 'build/admin/dashboard.css', [], BPTB_VERSION );
-				wp_enqueue_script( 'bptb-admin-dashboard', BPTB_DIR_URL . 'build/admin/dashboard.js', [ 'react', 'react-dom', "wp-components" ], BPTB_VERSION, true );
+				wp_enqueue_script( 'bptb-admin-dashboard', BPTB_DIR_URL . 'build/admin/dashboard.js', [ 'react', 'react-dom', "wp-components", "wp-util" ], BPTB_VERSION, true );
 				wp_set_script_translations( 'bptb-admin-dashboard', 'b-pricing-table', BPTB_DIR_PATH . 'languages' );
 			}
 		}

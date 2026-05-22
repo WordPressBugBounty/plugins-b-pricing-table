@@ -5,7 +5,7 @@
   "title": "Pricing Table",
   "description": "Display product prices as a table.",
   "category": "widgets",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "keywords": [
     "pricing",
     "price list",
@@ -92,6 +92,12 @@
             "blur": "2px",
             "spreed": "0px",
             "isInset": false
+          },
+          "radius": {
+            "top": "26px",
+            "right": "26px",
+            "bottom": "26px",
+            "left": "26px"
           }
         },
         "inActive": {
@@ -111,6 +117,12 @@
             "textDecoration": "auto",
             "lineHeight": "25px",
             "letterSpace": "0px"
+          },
+          "radius": {
+            "top": "26px",
+            "right": "26px",
+            "bottom": "26px",
+            "left": "26px"
           }
         },
         "discount": {
@@ -156,6 +168,12 @@
             },
             "angel": 270
           }
+        },
+        "toggleRadius": {
+          "top": "33px",
+          "right": "33px",
+          "bottom": "33px",
+          "left": "33px"
         }
       }
     },
@@ -198,25 +216,31 @@
           "features": [
             {
               "isEnable": true,
-              "label": "25GB Disk Space"
+              "label": "25GB Disk Space",
+              "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='priceFeatureEnabled' viewBox='0 0 512 512'><path d='m175.1 360.6l280.6-280.7q9.9-9.9 23.2-9.9 13.2 0 23.2 9.9 9.9 10 9.9 23.6 0 13.7-9.9 23.6l-303.8 304.6q-10 10-23.2 10-13.3 0-23.2-10l-142.4-142.3q-9.9-10-9.5-23.6 0.4-13.7 10.4-23.6 9.9-10 23.6-10 13.6 0 23.5 10z'/></svg>"
             },
             {
               "isEnable": true,
-              "label": "25 Email Accounts"
+              "label": "25 Email Accounts",
+              "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='priceFeatureEnabled' viewBox='0 0 512 512'><path d='m175.1 360.6l280.6-280.7q9.9-9.9 23.2-9.9 13.2 0 23.2 9.9 9.9 10 9.9 23.6 0 13.7-9.9 23.6l-303.8 304.6q-10 10-23.2 10-13.3 0-23.2-10l-142.4-142.3q-9.9-10-9.5-23.6 0.4-13.7 10.4-23.6 9.9-10 23.6-10 13.6 0 23.5 10z'/></svg>"
             },
             {
               "isEnable": true,
-              "label": "50GB Bandwidth"
+              "label": "50GB Bandwidth",
+              "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='priceFeatureEnabled' viewBox='0 0 512 512'><path d='m175.1 360.6l280.6-280.7q9.9-9.9 23.2-9.9 13.2 0 23.2 9.9 9.9 10 9.9 23.6 0 13.7-9.9 23.6l-303.8 304.6q-10 10-23.2 10-13.3 0-23.2-10l-142.4-142.3q-9.9-10-9.5-23.6 0.4-13.7 10.4-23.6 9.9-10 23.6-10 13.6 0 23.5 10z'/></svg>"
             },
             {
               "isEnable": true,
-              "label": "25 Subdomains"
+              "label": "25 Subdomains",
+              "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='priceFeatureEnabled' viewBox='0 0 512 512'><path d='m175.1 360.6l280.6-280.7q9.9-9.9 23.2-9.9 13.2 0 23.2 9.9 9.9 10 9.9 23.6 0 13.7-9.9 23.6l-303.8 304.6q-10 10-23.2 10-13.3 0-23.2-10l-142.4-142.3q-9.9-10-9.5-23.6 0.4-13.7 10.4-23.6 9.9-10 23.6-10 13.6 0 23.5 10z'/></svg>"
             },
             {
               "isEnable": false,
-              "label": "Maintenance"
+              "label": "Maintenance",
+              "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='priceFeatureDisabled' viewBox='0 0 512 512'><path d='m256 302.4l-162.2 162.2q-9.2 9.1-23.2 9.1-14.1 0-23.2-9.1-9.1-9.1-9.1-23.2 0-14 9.1-23.2l162.2-162.2-162.2-162.2q-9.1-9.2-9.1-23.2 0-14.1 9.1-23.2 9.1-9.1 23.2-9.1 14 0 23.2 9.1l162.2 162.2 162.2-162.2q9.2-9.1 23.2-9.1 14.1 0 23.2 9.1 9.1 9.1 9.1 23.2 0 14-9.1 23.2l-162.2 162.2 162.2 162.2q9.1 9.2 9.1 23.2 0 14.1-9.1 23.2-9.1 9.1-23.2 9.1-14 0-23.2-9.1z'/></svg>"
             }
-          ]
+          ],
+          "showPopularBadge": true
         },
         {
           "name": "Standard",
@@ -254,25 +278,31 @@
           "features": [
             {
               "isEnable": true,
-              "label": "25GB Disk Space"
+              "label": "25GB Disk Space",
+              "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='priceFeatureEnabled' viewBox='0 0 512 512'><path d='m175.1 360.6l280.6-280.7q9.9-9.9 23.2-9.9 13.2 0 23.2 9.9 9.9 10 9.9 23.6 0 13.7-9.9 23.6l-303.8 304.6q-10 10-23.2 10-13.3 0-23.2-10l-142.4-142.3q-9.9-10-9.5-23.6 0.4-13.7 10.4-23.6 9.9-10 23.6-10 13.6 0 23.5 10z'/></svg>"
             },
             {
               "isEnable": true,
-              "label": "25 Email Accounts"
+              "label": "25 Email Accounts",
+              "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='priceFeatureEnabled' viewBox='0 0 512 512'><path d='m175.1 360.6l280.6-280.7q9.9-9.9 23.2-9.9 13.2 0 23.2 9.9 9.9 10 9.9 23.6 0 13.7-9.9 23.6l-303.8 304.6q-10 10-23.2 10-13.3 0-23.2-10l-142.4-142.3q-9.9-10-9.5-23.6 0.4-13.7 10.4-23.6 9.9-10 23.6-10 13.6 0 23.5 10z'/></svg>"
             },
             {
               "isEnable": true,
-              "label": "50GB Bandwidth"
+              "label": "50GB Bandwidth",
+              "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='priceFeatureEnabled' viewBox='0 0 512 512'><path d='m175.1 360.6l280.6-280.7q9.9-9.9 23.2-9.9 13.2 0 23.2 9.9 9.9 10 9.9 23.6 0 13.7-9.9 23.6l-303.8 304.6q-10 10-23.2 10-13.3 0-23.2-10l-142.4-142.3q-9.9-10-9.5-23.6 0.4-13.7 10.4-23.6 9.9-10 23.6-10 13.6 0 23.5 10z'/></svg>"
             },
             {
               "isEnable": true,
-              "label": "25 Subdomains"
+              "label": "25 Subdomains",
+              "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='priceFeatureEnabled' viewBox='0 0 512 512'><path d='m175.1 360.6l280.6-280.7q9.9-9.9 23.2-9.9 13.2 0 23.2 9.9 9.9 10 9.9 23.6 0 13.7-9.9 23.6l-303.8 304.6q-10 10-23.2 10-13.3 0-23.2-10l-142.4-142.3q-9.9-10-9.5-23.6 0.4-13.7 10.4-23.6 9.9-10 23.6-10 13.6 0 23.5 10z'/></svg>"
             },
             {
               "isEnable": false,
-              "label": "Maintenance"
+              "label": "Maintenance",
+              "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='priceFeatureDisabled' viewBox='0 0 512 512'><path d='m256 302.4l-162.2 162.2q-9.2 9.1-23.2 9.1-14.1 0-23.2-9.1-9.1-9.1-9.1-23.2 0-14 9.1-23.2l162.2-162.2-162.2-162.2q-9.1-9.2-9.1-23.2 0-14.1 9.1-23.2 9.1-9.1 23.2-9.1 14 0 23.2 9.1l162.2 162.2 162.2-162.2q9.2-9.1 23.2-9.1 14.1 0 23.2 9.1 9.1 9.1 9.1 23.2 0 14-9.1 23.2l-162.2 162.2 162.2 162.2q9.1 9.2 9.1 23.2 0 14.1-9.1 23.2-9.1 9.1-23.2 9.1-14 0-23.2-9.1z'/></svg>"
             }
           ],
+          "showPopularBadge": true,
           "isCustomStyle": false,
           "colors": {
             "bg": {},
@@ -339,25 +369,31 @@
           "features": [
             {
               "isEnable": true,
-              "label": "25GB Disk Space"
+              "label": "25GB Disk Space",
+              "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='priceFeatureEnabled' viewBox='0 0 512 512'><path d='m175.1 360.6l280.6-280.7q9.9-9.9 23.2-9.9 13.2 0 23.2 9.9 9.9 10 9.9 23.6 0 13.7-9.9 23.6l-303.8 304.6q-10 10-23.2 10-13.3 0-23.2-10l-142.4-142.3q-9.9-10-9.5-23.6 0.4-13.7 10.4-23.6 9.9-10 23.6-10 13.6 0 23.5 10z'/></svg>"
             },
             {
               "isEnable": true,
-              "label": "25 Email Accounts"
+              "label": "25 Email Accounts",
+              "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='priceFeatureEnabled' viewBox='0 0 512 512'><path d='m175.1 360.6l280.6-280.7q9.9-9.9 23.2-9.9 13.2 0 23.2 9.9 9.9 10 9.9 23.6 0 13.7-9.9 23.6l-303.8 304.6q-10 10-23.2 10-13.3 0-23.2-10l-142.4-142.3q-9.9-10-9.5-23.6 0.4-13.7 10.4-23.6 9.9-10 23.6-10 13.6 0 23.5 10z'/></svg>"
             },
             {
               "isEnable": true,
-              "label": "50GB Bandwidth"
+              "label": "50GB Bandwidth",
+              "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='priceFeatureEnabled' viewBox='0 0 512 512'><path d='m175.1 360.6l280.6-280.7q9.9-9.9 23.2-9.9 13.2 0 23.2 9.9 9.9 10 9.9 23.6 0 13.7-9.9 23.6l-303.8 304.6q-10 10-23.2 10-13.3 0-23.2-10l-142.4-142.3q-9.9-10-9.5-23.6 0.4-13.7 10.4-23.6 9.9-10 23.6-10 13.6 0 23.5 10z'/></svg>"
             },
             {
               "isEnable": true,
-              "label": "25 Subdomains"
+              "label": "25 Subdomains",
+              "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='priceFeatureEnabled' viewBox='0 0 512 512'><path d='m175.1 360.6l280.6-280.7q9.9-9.9 23.2-9.9 13.2 0 23.2 9.9 9.9 10 9.9 23.6 0 13.7-9.9 23.6l-303.8 304.6q-10 10-23.2 10-13.3 0-23.2-10l-142.4-142.3q-9.9-10-9.5-23.6 0.4-13.7 10.4-23.6 9.9-10 23.6-10 13.6 0 23.5 10z'/></svg>"
             },
             {
               "isEnable": false,
-              "label": "Maintenance"
+              "label": "Maintenance",
+              "icon": "<svg xmlns='http://www.w3.org/2000/svg' class='priceFeatureDisabled' viewBox='0 0 512 512'><path d='m256 302.4l-162.2 162.2q-9.2 9.1-23.2 9.1-14.1 0-23.2-9.1-9.1-9.1-9.1-23.2 0-14 9.1-23.2l162.2-162.2-162.2-162.2q-9.1-9.2-9.1-23.2 0-14.1 9.1-23.2 9.1-9.1 23.2-9.1 14 0 23.2 9.1l162.2 162.2 162.2-162.2q9.2-9.1 23.2-9.1 14.1 0 23.2 9.1 9.1 9.1 9.1 23.2 0 14-9.1 23.2l-162.2 162.2 162.2 162.2q9.1 9.2 9.1 23.2 0 14.1-9.1 23.2-9.1 9.1-23.2 9.1-14 0-23.2-9.1z'/></svg>"
             }
           ],
+          "showPopularBadge": true,
           "isCustomStyle": false,
           "colors": {
             "bg": {},

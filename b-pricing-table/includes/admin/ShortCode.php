@@ -45,7 +45,9 @@ class BPTB_Shortcode {
 	}
 
 	function onAddShortcode( $atts ) {
-		$post_id = $atts['id'];
+		$atts = shortcode_atts(['id' => 0], $atts, 'bptb');
+		// $post_id = $atts['id'];
+		$post_id = intval($atts['id']);
 		$post = get_post( $post_id );
 
 		if ( !$post ) {
@@ -108,13 +110,12 @@ class BPTB_Shortcode {
 		return $use;
 	}
 
-  function adminEnqueueScripts( $hook ){
+	function adminEnqueueScripts( $hook ){
 		if( 'edit.php' === $hook || 'post.php' === $hook ){
 			wp_enqueue_style( 'bptb-admin-post', BPTB_DIR_URL . 'build/admin-post.css', [], BPTB_VERSION );
 			wp_enqueue_script( 'bptb-admin-post', BPTB_DIR_URL . 'build/admin-post.js', [], BPTB_VERSION, true );
 			wp_set_script_translations( 'bptb-admin-post', 'b-pricing-table', BPTB_DIR_PATH . 'languages' );
 	  }
 	}
-
 }
 new BPTB_Shortcode();
