@@ -1,10 +1,10 @@
 === Pricing Table - Block – Show Product or Service Pricing in Table Format ===
 Contributors: bplugins, abuhayat, tomorbplugins, freemius
 Donate link: https://www.buymeacoffee.com/abuhayat
-Tags: block, pricing table, price list, pricing block, product pricing
+Tags: block, pricing table, price list, gutenberg-blocks, product pricing
 Requires at least: 6.5+
 Tested up to: 7.0
-Stable tag: 2.0.3
+Stable tag: 2.0.4
 Requires PHP: 7.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html 
@@ -100,12 +100,19 @@ This plugin connects to the following external services from the admin dashboard
 * **Terms of Service:** [https://bplugins.com/terms-of-service/](https://bplugins.com/terms-of-service/)
 * **Privacy Policy:** [https://bplugins.com/privacy-policy/](https://bplugins.com/privacy-policy/)
 
+= Freemius (wp.freemius.com) =
+* **Endpoint:** https://wp.freemius.com/
+* **Used for:** Processing plugin opt-in consent form submissions.
+* **Data sent:** Only after explicit user opt-in — user name, email, site URL, WP/PHP version, plugin version.
+* **Terms of Service:** [https://freemius.com/terms/](https://freemius.com/terms/)
+* **Privacy Policy:** [https://freemius.com/privacy/](https://freemius.com/privacy/)
+
 = WordPress.org Plugins API =
 
 * **Service URL:** [https://api.wordpress.org/plugins/info/1.2/](https://api.wordpress.org/plugins/info/1.2/)
 * **Purpose:** The admin dashboard queries the official WordPress.org Plugins API to retrieve and display a curated list of other plugins by the same author ("Our Plugins" section).
 * **Data Sent:** Plugin slugs and author name; no personal or site data is collected.
-* **Terms of Service:** [https://wordpress.org/about/tos/](https://wordpress.org/about/tos/)
+* **Terms of Service:** [https://wordpress.com/tos/](https://wordpress.com/tos/)
 * **Privacy Policy:** [https://wordpress.org/about/privacy/](https://wordpress.org/about/privacy/)
 
 = Third-Party Libraries / bpl tools =
@@ -179,6 +186,10 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 == Changelog ==
 
+= 2.0.4 – 9 June 2026 =
+* Bug fixes and performance improvements.
+* Admin dashborad ui updated
+
 = 2.0.3 – 22 May 2026 =
 * Admin dashborad updated
 * Card style bug fixed
@@ -223,3 +234,10 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 = 1.0.0 =
 * Initial Release
+
+
+== Upgrade Notice ==
+
+= 2.0.4 – 9 June 2026 =
+* Bug fixes and performance improvements.
+* Admin dashborad ui updated

@@ -266,6 +266,7 @@ if(!class_exists(BPTBLicenseActivation::class )){
 				}
 			} catch ( \Throwable $e ) {
 				wp_send_json_error( [
+					/* translators: %s: Error message details */
 					'message' => sprintf( __( 'An error occurred during deactivation: %s', 'b-pricing-table' ), $e->getMessage() )
 				] );
 			}
@@ -307,6 +308,7 @@ if(!class_exists(BPTBLicenseActivation::class )){
 			if ( !current_user_can( 'manage_options' ) ) {
 				$action_text = ( 'activate' === $action ) ? 'activate' : ( ( 'status' === $action ) ? 'view' : 'deactivate' );
 				wp_send_json_error( [
+					/* translators: %s: Action name (activate/deactivate/view) */
 					'message' => sprintf( __( 'You do not have permission to %s licenses.', 'b-pricing-table' ), $action_text )
 				] );
 				wp_die(); // Explicit safeguard
@@ -337,6 +339,7 @@ if(!class_exists(BPTBLicenseActivation::class )){
 
 			if ( is_object( $error ) && isset( $error->code ) ) {
 				$error_code = $error->code;
+				/* translators: %s: Error message from API */
 				return isset( $messages[$error_code] ) ? $messages[$error_code] : sprintf( __( 'Activation failed: %s', 'b-pricing-table' ), $error->message );
 			}
 

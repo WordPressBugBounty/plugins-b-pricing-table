@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Pricing Table - Block
  * Description: Display product prices as a table
- * Version: 2.0.3
+ * Version: 2.0.4
  * Author: bPlugins
  * Author URI: https://bplugins.com
  * License: GPLv3 or later
@@ -16,7 +16,7 @@ if ( !defined( 'ABSPATH' ) ) {
 if ( function_exists( 'bptb_fs' ) ) {
     bptb_fs()->set_basename( false, __FILE__ );
 } else {
-    define( 'BPTB_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '2.0.3' ) );
+    define( 'BPTB_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '2.0.4' ) );
     define( 'BPTB_DIR_URL', plugin_dir_url( __FILE__ ) );
     define( 'BPTB_DIR_PATH', plugin_dir_path( __FILE__ ) );
     define( 'BPTB_HAS_PRO', file_exists( dirname( __FILE__ ) . '/vendor/freemius/start.php' ) );
