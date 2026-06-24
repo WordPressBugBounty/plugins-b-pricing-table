@@ -1,0 +1,1367 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "bptb/hosting-pricing",
+  "title": "Web Hosting Pricing",
+  "description": "Dark, tech-forward web hosting pricing table with cyan accent, billing toggle and a glowing popular plan.",
+  "category": "widgets",
+  "version": "2.1.0",
+  "keywords": [
+    "pricing",
+    "hosting",
+    "web hosting",
+    "pricing table",
+    "plans",
+    "domains",
+    "billing toggle"
+  ],
+  "textdomain": "b-pricing-table",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "wide"
+    },
+    "themeStyle": {
+      "type": "object",
+      "default": {
+        "theme": "hostingPricingtable"
+      }
+    },
+    "cycles": {
+      "type": "array",
+      "default": [
+        {
+          "isEnabled": true,
+          "cycle": "monthly",
+          "label": "Monthly",
+          "isDefault": true,
+          "hasDiscount": false,
+          "discountText": "Save 20%"
+        },
+        {
+          "isEnabled": true,
+          "cycle": "annual",
+          "label": "Yearly",
+          "isDefault": false,
+          "hasDiscount": true,
+          "discountText": "Save 20%"
+        },
+        {
+          "isEnabled": false,
+          "cycle": "lifetime",
+          "label": "Lifetime",
+          "isDefault": false,
+          "hasDiscount": false,
+          "discountText": "Save 20%"
+        }
+      ]
+    },
+    "pricingTables": {
+      "type": "array",
+      "default": [
+        {
+          "name": "Starter",
+          "nameIcon": {
+            "enabled": true,
+            "icon": "<svg fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z\"/></svg>"
+          },
+          "price": 2.99,
+          "prices": {
+            "monthly": {
+              "amount": 2.99,
+              "label": "mo"
+            },
+            "annual": {
+              "amount": 2.39,
+              "label": "yr"
+            },
+            "lifetime": {
+              "amount": 100,
+              "label": "lifetime"
+            }
+          },
+          "priceCurrency": "$",
+          "period": "mo",
+          "isFeatured": false,
+          "id": false,
+          "description": "Renews at $7.99/mo. Everything you need to launch your first website.",
+          "link": "#",
+          "linkLabel": "Get started",
+          "linkIcon": "<svg viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M17.707 9.293l-5-5a.999.999 0 10-1.414 1.414L14.586 9H3a1 1 0 100 2h11.586l-3.293 3.293a.999.999 0 101.414 1.414l5-5a.999.999 0 000-1.414z\"></path></svg>",
+          "isLinkNewTab": false,
+          "color": "#22D3EE",
+          "features": [
+            {
+              "isEnable": true,
+              "label": "1 website"
+            },
+            {
+              "isEnable": true,
+              "label": "25 GB NVMe storage"
+            },
+            {
+              "isEnable": true,
+              "label": "100 GB bandwidth"
+            },
+            {
+              "isEnable": true,
+              "label": "Free SSL certificate"
+            },
+            {
+              "isEnable": true,
+              "label": "Free domain for 1 year"
+            },
+            {
+              "isEnable": false,
+              "label": "Daily backups"
+            },
+            {
+              "isEnable": false,
+              "label": "Priority support"
+            }
+          ],
+          "isCustomStyle": false,
+          "colors": {
+            "bg": {},
+            "name": "",
+            "nameIcon": "",
+            "price": "",
+            "period": "",
+            "description": "",
+            "features": "",
+            "check": "",
+            "unCheck": "",
+            "checkUnCheckBG": "",
+            "button": {},
+            "buttonHover": {}
+          },
+          "hovColors": {
+            "bg": {},
+            "name": "",
+            "nameIcon": "",
+            "price": "",
+            "period": "",
+            "description": "",
+            "features": "",
+            "check": "",
+            "unCheck": "",
+            "checkUnCheckBG": "",
+            "button": {},
+            "buttonHover": {}
+          }
+        },
+        {
+          "name": "Business",
+          "nameIcon": {
+            "enabled": true,
+            "icon": "<svg fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z\"/></svg>"
+          },
+          "price": 5.99,
+          "prices": {
+            "monthly": {
+              "amount": 5.99,
+              "label": "mo"
+            },
+            "annual": {
+              "amount": 4.79,
+              "label": "yr"
+            },
+            "lifetime": {
+              "amount": 200,
+              "label": "lifetime"
+            }
+          },
+          "priceCurrency": "$",
+          "period": "mo",
+          "isFeatured": true,
+          "id": false,
+          "description": "Renews at $12.99/mo. More power and speed for growing sites.",
+          "link": "#",
+          "linkLabel": "Choose plan",
+          "linkIcon": "<svg viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M17.707 9.293l-5-5a.999.999 0 10-1.414 1.414L14.586 9H3a1 1 0 100 2h11.586l-3.293 3.293a.999.999 0 101.414 1.414l5-5a.999.999 0 000-1.414z\"></path></svg>",
+          "isLinkNewTab": false,
+          "color": "#22D3EE",
+          "features": [
+            {
+              "isEnable": true,
+              "label": "25 websites"
+            },
+            {
+              "isEnable": true,
+              "label": "100 GB NVMe storage"
+            },
+            {
+              "isEnable": true,
+              "label": "Unmetered bandwidth"
+            },
+            {
+              "isEnable": true,
+              "label": "Free SSL & domain"
+            },
+            {
+              "isEnable": true,
+              "label": "Daily backups"
+            },
+            {
+              "isEnable": true,
+              "label": "Free CDN"
+            },
+            {
+              "isEnable": true,
+              "label": "99.9% uptime guarantee"
+            }
+          ],
+          "isCustomStyle": false,
+          "colors": {
+            "bg": {},
+            "name": "",
+            "nameIcon": "",
+            "price": "",
+            "period": "",
+            "description": "",
+            "features": "",
+            "check": "",
+            "unCheck": "",
+            "checkUnCheckBG": "",
+            "button": {},
+            "buttonHover": {}
+          },
+          "hovColors": {
+            "bg": {},
+            "name": "",
+            "nameIcon": "",
+            "price": "",
+            "period": "",
+            "description": "",
+            "features": "",
+            "check": "",
+            "unCheck": "",
+            "checkUnCheckBG": "",
+            "button": {},
+            "buttonHover": {}
+          }
+        },
+        {
+          "name": "Cloud Pro",
+          "nameIcon": {
+            "enabled": true,
+            "icon": "<svg fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z\"/></svg>"
+          },
+          "price": 11.99,
+          "prices": {
+            "monthly": {
+              "amount": 11.99,
+              "label": "mo"
+            },
+            "annual": {
+              "amount": 9.59,
+              "label": "yr"
+            },
+            "lifetime": {
+              "amount": 300,
+              "label": "lifetime"
+            }
+          },
+          "priceCurrency": "$",
+          "period": "mo",
+          "isFeatured": false,
+          "id": false,
+          "description": "Renews at $24.99/mo. Dedicated cloud resources for high-traffic sites.",
+          "link": "#",
+          "linkLabel": "Choose plan",
+          "linkIcon": "<svg viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M17.707 9.293l-5-5a.999.999 0 10-1.414 1.414L14.586 9H3a1 1 0 100 2h11.586l-3.293 3.293a.999.999 0 101.414 1.414l5-5a.999.999 0 000-1.414z\"></path></svg>",
+          "isLinkNewTab": false,
+          "color": "#22D3EE",
+          "features": [
+            {
+              "isEnable": true,
+              "label": "100 websites"
+            },
+            {
+              "isEnable": true,
+              "label": "200 GB NVMe storage"
+            },
+            {
+              "isEnable": true,
+              "label": "Unmetered bandwidth"
+            },
+            {
+              "isEnable": true,
+              "label": "Dedicated IP"
+            },
+            {
+              "isEnable": true,
+              "label": "Daily backups + staging"
+            },
+            {
+              "isEnable": true,
+              "label": "Priority 24/7 support"
+            },
+            {
+              "isEnable": true,
+              "label": "99.99% uptime SLA"
+            }
+          ],
+          "isCustomStyle": false,
+          "colors": {
+            "bg": {},
+            "name": "",
+            "nameIcon": "",
+            "price": "",
+            "period": "",
+            "description": "",
+            "features": "",
+            "check": "",
+            "unCheck": "",
+            "checkUnCheckBG": "",
+            "button": {},
+            "buttonHover": {}
+          },
+          "hovColors": {
+            "bg": {},
+            "name": "",
+            "nameIcon": "",
+            "price": "",
+            "period": "",
+            "description": "",
+            "features": "",
+            "check": "",
+            "unCheck": "",
+            "checkUnCheckBG": "",
+            "button": {},
+            "buttonHover": {}
+          }
+        }
+      ]
+    },
+    "featuresColumn": {
+      "type": "object",
+      "default": {
+        "desktop": 2,
+        "tablet": 2,
+        "mobile": 1
+      }
+    },
+    "options": {
+      "type": "object",
+      "default": {
+        "featuredText": "Most popular",
+        "bg": "linear-gradient(90deg, #22D3EE 0%, #2563EB 100%)",
+        "color": "#0B1120",
+        "popularTypo": {
+          "fontFamily": "Manrope",
+          "fontCategory": "sans-serif",
+          "fontWeight": 700,
+          "fontSize": {
+            "desktop": 12,
+            "tablet": 12,
+            "mobile": 12
+          },
+          "fontStyle": "",
+          "textTransform": "uppercase",
+          "textDecoration": "",
+          "lineHeight": "",
+          "letterSpace": "0.05em"
+        },
+        "popularRadius": {
+          "top": "12px",
+          "right": "12px",
+          "bottom": "12px",
+          "left": "12px"
+        },
+        "popularPadding": {
+          "desktop": {
+            "top": "5px",
+            "right": "14px",
+            "bottom": "5px",
+            "left": "14px"
+          },
+          "tablet": {
+            "top": "5px",
+            "right": "14px",
+            "bottom": "5px",
+            "left": "14px"
+          },
+          "mobile": {
+            "top": "5px",
+            "right": "14px",
+            "bottom": "5px",
+            "left": "14px"
+          }
+        },
+        "popularMargin": {
+          "desktop": {
+            "top": "0px",
+            "right": "0px",
+            "bottom": "16px",
+            "left": "0px"
+          },
+          "tablet": {
+            "top": "0px",
+            "right": "0px",
+            "bottom": "16px",
+            "left": "0px"
+          },
+          "mobile": {
+            "top": "0px",
+            "right": "0px",
+            "bottom": "16px",
+            "left": "0px"
+          }
+        }
+      }
+    },
+    "columns": {
+      "type": "object",
+      "default": {
+        "desktop": 3,
+        "tablet": 2,
+        "mobile": 1
+      }
+    },
+    "columnGap": {
+      "type": "string",
+      "default": "24px"
+    },
+    "rowGap": {
+      "type": "string",
+      "default": "24px"
+    },
+    "textAlign": {
+      "type": "string",
+      "default": "left"
+    },
+    "padding": {
+      "type": "object",
+      "default": {
+        "vertical": "35px",
+        "horizontal": "25px"
+      }
+    },
+    "shadow": {
+      "type": "object",
+      "default": {
+        "blur": "30px",
+        "color": "#0000004d"
+      }
+    },
+    "cyclesStyle": {
+      "type": "object",
+      "default": {
+        "normal": {
+          "bgColor": "#111827"
+        },
+        "radius": {
+          "top": "28px",
+          "right": "28px",
+          "bottom": "28px",
+          "left": "28px"
+        },
+        "border": {
+          "color": "transparent",
+          "width": "0px",
+          "style": "solid"
+        },
+        "width": "40%",
+        "buttonRadius": {
+          "top": "28px",
+          "right": "28px",
+          "bottom": "28px",
+          "left": "28px"
+        },
+        "active": {
+          "typo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 600,
+            "fontSize": {
+              "desktop": 14,
+              "tablet": 14,
+              "mobile": 14
+            },
+            "fontStyle": "normal",
+            "textTransform": "none",
+            "textDecoration": "auto",
+            "lineHeight": "22px",
+            "letterSpace": "0px"
+          },
+          "bgColor": "#22D3EE",
+          "color": "#0B1120",
+          "shadow": {
+            "color": "rgba(34, 211, 238, 0.35)",
+            "hOffset": "0px",
+            "vOffset": "4px",
+            "blur": "12px",
+            "spreed": "0px",
+            "isInset": false
+          }
+        },
+        "inActive": {
+          "bgColor": "#1D4D69",
+          "color": "#94A3B8",
+          "typo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 600,
+            "fontSize": {
+              "desktop": 14,
+              "tablet": 14,
+              "mobile": 14
+            },
+            "fontStyle": "normal",
+            "textTransform": "none",
+            "textDecoration": "auto",
+            "lineHeight": "22px",
+            "letterSpace": "0px"
+          }
+        },
+        "discount": {
+          "typo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 700,
+            "fontSize": {
+              "desktop": 12,
+              "tablet": 12,
+              "mobile": 12
+            },
+            "fontStyle": "normal",
+            "textTransform": "uppercase",
+            "textDecoration": "auto",
+            "lineHeight": "18px",
+            "letterSpace": "0.04em"
+          },
+          "bgColor": "#a3e635",
+          "color": "#0b1120",
+          "radius": {
+            "top": "28px",
+            "right": "28px",
+            "bottom": "28px",
+            "left": "28px"
+          }
+        }
+      }
+    },
+    "styles": {
+      "type": "object",
+      "default": {
+        "width ": "",
+        "columns": {
+          "desktop": 3,
+          "tablet": 2,
+          "mobile": 1
+        },
+        "columnGap": {
+          "desktop": "24px",
+          "tablet": "20px",
+          "mobile": "16px"
+        },
+        "rowGap": {
+          "desktop": "16px",
+          "tablet": "0",
+          "mobile": "0"
+        },
+        "backgroundColor": "#111827",
+        "featuresBackgroundColor": "#111827",
+        "secBgColor": "#4d352900",
+        "secPadding": {
+          "desktop": {
+            "top": "40px",
+            "right": "24px",
+            "bottom": "40px",
+            "left": "24px"
+          },
+          "tablet": {
+            "top": "40px",
+            "right": "24px",
+            "bottom": "40px",
+            "left": "24px"
+          },
+          "mobile": {
+            "top": "32px",
+            "right": "16px",
+            "bottom": "32px",
+            "left": "16px"
+          }
+        },
+        "secRadius": {
+          "top": "20px",
+          "right": "20px",
+          "bottom": "20px",
+          "left": "20px"
+        },
+        "radius": {
+          "top": "14px",
+          "right": "14px",
+          "bottom": "14px",
+          "left": "14px"
+        },
+        "shadow": {
+          "color": "rgba(0, 0, 0, 0.4)",
+          "hOffset": "0px",
+          "vOffset": "1px",
+          "blur": "2px",
+          "spreed": "0px",
+          "isInset": false
+        },
+        "border": {
+          "color": "#1F2937",
+          "width": "1px",
+          "style": "solid"
+        },
+        "padding": {
+          "desktop": {
+            "top": "",
+            "right": "",
+            "bottom": "",
+            "left": ""
+          },
+          "tablet": {
+            "top": "",
+            "right": "",
+            "bottom": "",
+            "left": ""
+          },
+          "mobile": {
+            "top": "",
+            "right": "",
+            "bottom": "",
+            "left": ""
+          }
+        },
+        "cardPadding": {
+          "desktop": {
+            "top": "30px",
+            "right": "28px",
+            "bottom": "30px",
+            "left": "28px"
+          },
+          "tablet": {
+            "top": "28px",
+            "right": "24px",
+            "bottom": "28px",
+            "left": "24px"
+          },
+          "mobile": {
+            "top": "24px",
+            "right": "22px",
+            "bottom": "24px",
+            "left": "22px"
+          }
+        },
+        "nameTypo": {
+          "fontFamily": "Manrope",
+          "fontCategory": "sans-serif",
+          "fontWeight": 700,
+          "fontSize": {
+            "desktop": 19,
+            "tablet": 19,
+            "mobile": 18
+          },
+          "fontStyle": "",
+          "textTransform": "",
+          "textDecoration": "",
+          "lineHeight": "",
+          "letterSpace": "0.01em"
+        },
+        "nameColor": "#F8FAFC",
+        "nameMargin": {
+          "desktop": {
+            "top": "",
+            "right": "",
+            "bottom": "",
+            "left": ""
+          },
+          "tablet": {
+            "top": "",
+            "right": "",
+            "bottom": "",
+            "left": ""
+          },
+          "mobile": {
+            "top": "",
+            "right": "",
+            "bottom": "",
+            "left": ""
+          }
+        },
+        "nameIconSize": "20px",
+        "nameIconColor": "#94A3B8",
+        "currencyTypo": {
+          "fontFamily": "Manrope",
+          "fontCategory": "sans-serif",
+          "fontWeight": 700,
+          "fontSize": {
+            "desktop": 23,
+            "tablet": 22,
+            "mobile": 20
+          },
+          "fontStyle": "",
+          "textTransform": "",
+          "textDecoration": "",
+          "lineHeight": "",
+          "letterSpace": ""
+        },
+        "currencyColor": "#94A3B8",
+        "amountTypo": {
+          "fontFamily": "Manrope",
+          "fontCategory": "sans-serif",
+          "fontWeight": 800,
+          "fontSize": {
+            "desktop": 48,
+            "tablet": 44,
+            "mobile": 40
+          },
+          "fontStyle": "",
+          "textTransform": "",
+          "textDecoration": "",
+          "lineHeight": "1",
+          "letterSpace": "-0.02em"
+        },
+        "amountColor": "#FFFFFF",
+        "amountMarging": {
+          "desktop": {
+            "top": "",
+            "right": "",
+            "bottom": "",
+            "left": ""
+          },
+          "tablet": {
+            "top": "",
+            "right": "",
+            "bottom": "",
+            "left": ""
+          },
+          "mobile": {
+            "top": "",
+            "right": "",
+            "bottom": "",
+            "left": ""
+          }
+        },
+        "periodTypo": {
+          "fontFamily": "Manrope",
+          "fontCategory": "sans-serif",
+          "fontWeight": 500,
+          "fontSize": {
+            "desktop": 15,
+            "tablet": 15,
+            "mobile": 15
+          },
+          "fontStyle": "",
+          "textTransform": "",
+          "textDecoration": "",
+          "lineHeight": "",
+          "letterSpace": ""
+        },
+        "periodColor": "#94A3B8",
+        "periodMargin": {
+          "desktop": {
+            "top": "0px",
+            "right": "0px",
+            "bottom": "0px",
+            "left": "4px"
+          },
+          "tablet": {
+            "top": "0px",
+            "right": "0px",
+            "bottom": "0px",
+            "left": "4px"
+          },
+          "mobile": {
+            "top": "0px",
+            "right": "0px",
+            "bottom": "0px",
+            "left": "4px"
+          }
+        },
+        "periodGap": "4px",
+        "desTypo": {
+          "fontFamily": "Manrope",
+          "fontCategory": "sans-serif",
+          "fontWeight": 400,
+          "fontSize": {
+            "desktop": 14,
+            "tablet": 14,
+            "mobile": 14
+          },
+          "fontStyle": "",
+          "textTransform": "",
+          "textDecoration": "",
+          "lineHeight": "1.5",
+          "letterSpace": ""
+        },
+        "desColor": "#94A3B8",
+        "desMargin": {
+          "desktop": {
+            "top": "8px",
+            "right": "0px",
+            "bottom": "20px",
+            "left": "0px"
+          },
+          "tablet": {
+            "top": "8px",
+            "right": "0px",
+            "bottom": "20px",
+            "left": "0px"
+          },
+          "mobile": {
+            "top": "8px",
+            "right": "0px",
+            "bottom": "20px",
+            "left": "0px"
+          }
+        },
+        "features": {
+          "checkmarkGlobalColor": "#22D3EE",
+          "uncheckColor": "#F70000E3",
+          "typo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 500,
+            "fontSize": {
+              "desktop": 15,
+              "tablet": 15,
+              "mobile": 15
+            },
+            "fontStyle": "normal",
+            "textTransform": "none",
+            "textDecoration": "auto",
+            "lineHeight": "22px",
+            "letterSpace": "0px"
+          },
+          "color": "#CBD5E1",
+          "padding": {
+            "desktop": {
+              "top": "28px",
+              "right": "28px",
+              "bottom": "28px",
+              "left": "28px"
+            },
+            "tablet": {
+              "top": "28px",
+              "right": "28px",
+              "bottom": "28px",
+              "left": "28px"
+            },
+            "mobile": {
+              "top": "28px",
+              "right": "28px",
+              "bottom": "28px",
+              "left": "28px"
+            }
+          },
+          "margin": {
+            "desktop": {
+              "top": "0px",
+              "right": "0px",
+              "bottom": "14px",
+              "left": "0px"
+            },
+            "tablet": {
+              "top": "0px",
+              "right": "0px",
+              "bottom": "14px",
+              "left": "0px"
+            },
+            "mobile": {
+              "top": "0px",
+              "right": "0px",
+              "bottom": "14px",
+              "left": "0px"
+            }
+          },
+          "iconMargin": {
+            "desktop": {
+              "top": "0px",
+              "right": "12px",
+              "bottom": "0px",
+              "left": "0px"
+            },
+            "tablet": {
+              "top": "0px",
+              "right": "12px",
+              "bottom": "0px",
+              "left": "0px"
+            },
+            "mobile": {
+              "top": "0px",
+              "right": "12px",
+              "bottom": "0px",
+              "left": "0px"
+            }
+          },
+          "iconPadding": {
+            "desktop": {
+              "top": "9px",
+              "right": "9px",
+              "bottom": "9px",
+              "left": "9px"
+            },
+            "tablet": {
+              "top": "9px",
+              "right": "9px",
+              "bottom": "9px",
+              "left": "9px"
+            },
+            "mobile": {
+              "top": "9px",
+              "right": "9px",
+              "bottom": "9px",
+              "left": "9px"
+            }
+          },
+          "iconBorder": {
+            "color": "transparent",
+            "width": "0px",
+            "style": "solid",
+            "side": "all",
+            "radius": "50%"
+          },
+          "iconBg": "#7D7474EB",
+          "featureIconGap": "12px",
+          "featurelistGap": "14px",
+          "checkmarkWidth": "14px",
+          "uncheckHight": "14px"
+        },
+        "buttonStyle": {
+          "padding": {
+            "desktop": {
+              "top": "13px",
+              "right": "16px",
+              "bottom": "13px",
+              "left": "16px"
+            },
+            "tablet": {
+              "top": "13px",
+              "right": "16px",
+              "bottom": "13px",
+              "left": "16px"
+            },
+            "mobile": {
+              "top": "13px",
+              "right": "16px",
+              "bottom": "13px",
+              "left": "16px"
+            }
+          },
+          "typo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 700,
+            "fontSize": {
+              "desktop": 15,
+              "tablet": 15,
+              "mobile": 15
+            },
+            "fontStyle": "",
+            "textTransform": "",
+            "textDecoration": "",
+            "lineHeight": "",
+            "letterSpace": ""
+          },
+          "color": "#E2E8F0",
+          "hoverTextColor": "#22D3EE",
+          "iconColor": "#94A3B8",
+          "iconHoverColor": "#22D3EE",
+          "iconSize": "16px",
+          "iconGap": "6px",
+          "shadow": {
+            "hOffset": "0px",
+            "vOffset": "0px",
+            "blur": "0px",
+            "spreed": "0px",
+            "color": "rgba(0, 0, 0, 0)",
+            "isInset": false
+          },
+          "bgColor": "transparent",
+          "bgHover": "rgba(34, 211, 238, 0.08)",
+          "bgHoverTextColor": "#22D3EE",
+          "radius": {
+            "top": "10px",
+            "right": "10px",
+            "bottom": "10px",
+            "left": "10px"
+          },
+          "border": {
+            "color": "#334155",
+            "width": "1px",
+            "style": "solid"
+          }
+        },
+        "featured": {
+          "featuredBackgroundColor": "linear-gradient(180deg, #0B2A33 0%, #0F1B2D 55%)",
+          "featuredRadius": {
+            "top": "16px",
+            "right": "16px",
+            "bottom": "16px",
+            "left": "16px"
+          },
+          "featuredBorder": {
+            "color": "#22D3EE",
+            "width": "2px",
+            "style": "solid"
+          },
+          "featuredShadow": {
+            "hOffset": "0px",
+            "vOffset": "24px",
+            "blur": "48px",
+            "spreed": "-16px",
+            "color": "rgba(34, 211, 238, 0.35)",
+            "isInset": false
+          },
+          "gradientColor": {
+            "type": "linear",
+            "radialType": "circle",
+            "colors": [
+              {
+                "color": "#0B2A33",
+                "position": 0
+              },
+              {
+                "color": "#0F1B2D",
+                "position": 55
+              }
+            ],
+            "centerPositions": {
+              "x": 0,
+              "y": 0
+            },
+            "angel": 180
+          },
+          "titleTypo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 700,
+            "fontSize": {
+              "desktop": 19,
+              "tablet": 19,
+              "mobile": 18
+            },
+            "fontStyle": "",
+            "textTransform": "",
+            "textDecoration": "",
+            "lineHeight": "",
+            "letterSpace": ""
+          },
+          "titleColor": "#F8FAFC",
+          "currencyTypo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 700,
+            "fontSize": {
+              "desktop": 23,
+              "tablet": 22,
+              "mobile": 20
+            },
+            "fontStyle": "",
+            "textTransform": "",
+            "textDecoration": "",
+            "lineHeight": "",
+            "letterSpace": ""
+          },
+          "currencyColor": "#94A3B8",
+          "amountTypo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 800,
+            "fontSize": {
+              "desktop": 48,
+              "tablet": 44,
+              "mobile": 40
+            },
+            "fontStyle": "",
+            "textTransform": "",
+            "textDecoration": "",
+            "lineHeight": "1",
+            "letterSpace": "-0.02em"
+          },
+          "amountColor": "#FFFFFF",
+          "periodTypo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 500,
+            "fontSize": {
+              "desktop": 15,
+              "tablet": 15,
+              "mobile": 15
+            },
+            "fontStyle": "",
+            "textTransform": "",
+            "textDecoration": "",
+            "lineHeight": "",
+            "letterSpace": ""
+          },
+          "periodColor": "#94A3B8",
+          "periodMargin": {
+            "desktop": {
+              "top": "0px",
+              "right": "0px",
+              "bottom": "0px",
+              "left": "4px"
+            },
+            "tablet": {
+              "top": "0px",
+              "right": "0px",
+              "bottom": "0px",
+              "left": "4px"
+            },
+            "mobile": {
+              "top": "0px",
+              "right": "0px",
+              "bottom": "0px",
+              "left": "4px"
+            }
+          },
+          "periodGap": "4px",
+          "desColor": "#94A3B8",
+          "desTypo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 400,
+            "fontSize": {
+              "desktop": 14,
+              "tablet": 14,
+              "mobile": 14
+            },
+            "fontStyle": "",
+            "textTransform": "",
+            "textDecoration": "",
+            "lineHeight": "",
+            "letterSpace": ""
+          },
+          "desMargin": {
+            "desktop": {
+              "top": "8px",
+              "right": "0px",
+              "bottom": "20px",
+              "left": "0px"
+            },
+            "tablet": {
+              "top": "8px",
+              "right": "0px",
+              "bottom": "20px",
+              "left": "0px"
+            },
+            "mobile": {
+              "top": "8px",
+              "right": "0px",
+              "bottom": "20px",
+              "left": "0px"
+            }
+          },
+          "features": {
+            "checkmarkGlobalColor": "#22d3ee",
+            "uncheckColor": "#F70000E3",
+            "typo": {
+              "fontFamily": "Manrope",
+              "fontCategory": "sans-serif",
+              "fontWeight": 500,
+              "fontSize": {
+                "desktop": 15,
+                "tablet": 15,
+                "mobile": 15
+              },
+              "fontStyle": "normal",
+              "textTransform": "none",
+              "textDecoration": "auto",
+              "lineHeight": "22px",
+              "letterSpace": "0px"
+            },
+            "featureColor": "#CBD5E1",
+            "color": "#CBD5E1",
+            "padding": {
+              "desktop": {
+                "top": "28px",
+                "right": "28px",
+                "bottom": "28px",
+                "left": "28px"
+              },
+              "tablet": {
+                "top": "28px",
+                "right": "28px",
+                "bottom": "28px",
+                "left": "28px"
+              },
+              "mobile": {
+                "top": "28px",
+                "right": "28px",
+                "bottom": "28px",
+                "left": "28px"
+              }
+            },
+            "margin": {
+              "desktop": {
+                "top": "0px",
+                "right": "0px",
+                "bottom": "14px",
+                "left": "0px"
+              },
+              "tablet": {
+                "top": "0px",
+                "right": "0px",
+                "bottom": "14px",
+                "left": "0px"
+              },
+              "mobile": {
+                "top": "0px",
+                "right": "0px",
+                "bottom": "14px",
+                "left": "0px"
+              }
+            },
+            "iconMargin": {
+              "desktop": {
+                "top": "0px",
+                "right": "12px",
+                "bottom": "0px",
+                "left": "0px"
+              },
+              "tablet": {
+                "top": "0px",
+                "right": "12px",
+                "bottom": "0px",
+                "left": "0px"
+              },
+              "mobile": {
+                "top": "0px",
+                "right": "12px",
+                "bottom": "0px",
+                "left": "0px"
+              }
+            },
+            "iconPadding": {
+              "desktop": {
+                "top": "9px",
+                "right": "9px",
+                "bottom": "9px",
+                "left": "9px"
+              },
+              "tablet": {
+                "top": "9px",
+                "right": "9px",
+                "bottom": "9px",
+                "left": "9px"
+              },
+              "mobile": {
+                "top": "9px",
+                "right": "9px",
+                "bottom": "9px",
+                "left": "9px"
+              }
+            },
+            "iconBorder": {
+              "color": "#00000000",
+              "width": "0px",
+              "style": "solid",
+              "side": "all",
+              "radius": "50%"
+            },
+            "iconBg": "#7D7474EB",
+            "featurelistGap": "14px",
+            "featureIconGap": "12px",
+            "uncheckHight": "14px",
+            "checkmarkWidth": "14px"
+          },
+          "buttonStyle": {
+            "typo": {
+              "fontFamily": "Manrope",
+              "fontCategory": "sans-serif",
+              "fontWeight": 700,
+              "fontSize": {
+                "desktop": 15,
+                "tablet": 15,
+                "mobile": 15
+              },
+              "fontStyle": "",
+              "textTransform": "",
+              "textDecoration": "",
+              "lineHeight": "",
+              "letterSpace": ""
+            },
+            "color": "#070C12",
+            "textHoverColor": "#0B1120",
+            "hoverTextColor": "#0B1120",
+            "iconColor": "#0B1120",
+            "iconHoverColor": "#0B1120",
+            "iconSize": "16px",
+            "iconGap": "6px",
+            "shadow": {
+              "hOffset": "0px",
+              "vOffset": "8px",
+              "blur": "24px",
+              "spreed": "-6px",
+              "color": "rgba(34, 211, 238, 0.5)",
+              "isInset": false
+            },
+            "bgColor": "linear-gradient(90deg, #22D3EE 0%, #2563EB 100%)",
+            "bgHover": "linear-gradient(90deg, #06B6D4 0%, #1D4ED8 100%)",
+            "bgHoverColor": "linear-gradient(90deg, #06B6D4 0%, #1D4ED8 100%)",
+            "borderAndRadius": {
+              "color": "transparent",
+              "width": "0px",
+              "style": "solid",
+              "side": "all",
+              "radius": "10px"
+            },
+            "radius": {
+              "top": "10px",
+              "right": "10px",
+              "bottom": "10px",
+              "left": "10px"
+            },
+            "padding": {
+              "desktop": {
+                "top": "14px",
+                "right": "16px",
+                "bottom": "14px",
+                "left": "16px"
+              },
+              "tablet": {
+                "top": "14px",
+                "right": "16px",
+                "bottom": "14px",
+                "left": "16px"
+              },
+              "mobile": {
+                "top": "14px",
+                "right": "16px",
+                "bottom": "14px",
+                "left": "16px"
+              }
+            },
+            "border": {
+              "color": "transparent",
+              "width": "0px",
+              "style": "solid"
+            }
+          }
+        }
+      }
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false
+  },
+  "example": {
+    "attributes": {
+      "columns": {
+        "desktop": 3,
+        "tablet": 2,
+        "mobile": 1
+      }
+    }
+  },
+  "editorScript": [
+    "file:./index.js",
+    "wp-api"
+  ],
+  "editorStyle": "file:./index.css",
+  "render": "file:./render.php",
+  "style": "file:./view.css",
+  "viewScript": "file:./view.js"
+}

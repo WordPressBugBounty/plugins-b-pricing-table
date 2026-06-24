@@ -1,0 +1,780 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "bptb/pricing-slider",
+  "title": "Pricing Slider",
+  "description": "Interactive usage slider with live price calculation, tier breakpoints, billing toggle, and plan card.",
+  "category": "widgets",
+  "version": "2.1.0",
+  "keywords": [
+    "pricing slider",
+    "price calculator",
+    "usage based",
+    "cost estimator",
+    "saas pricing"
+  ],
+  "textdomain": "b-pricing-table",
+  "attributes": {
+    "unit": {
+      "type": "object",
+      "default": {
+        "label": "How many team members?",
+        "nameSingular": "user",
+        "namePlural": "users",
+        "min": 1,
+        "max": 200,
+        "step": 1,
+        "defaultValue": 10,
+        "valuePrefix": "",
+        "valueSuffix": "",
+        "showInput": true,
+        "snapPoints": ""
+      }
+    },
+    "tiers": {
+      "type": "array",
+      "default": [
+        {
+          "name": "Starter",
+          "upTo": 10,
+          "pricingMode": "perUnit",
+          "pricePerUnit": 5,
+          "flatPrice": 0,
+          "yearlyPricePerUnit": "",
+          "yearlyFlatPrice": "",
+          "description": "Everything a small team needs to get going.",
+          "features": [
+            "Up to 10 users",
+            "Community support",
+            "Core features"
+          ],
+          "badge": {
+            "enabled": false,
+            "text": ""
+          },
+          "cta": {
+            "text": "",
+            "url": "",
+            "isNewTab": false
+          },
+          "accentColor": "",
+          "isVisible": true
+        },
+        {
+          "name": "Growth",
+          "upTo": 130,
+          "pricingMode": "perUnit",
+          "pricePerUnit": 4,
+          "flatPrice": 0,
+          "yearlyPricePerUnit": "",
+          "yearlyFlatPrice": "",
+          "description": "Best for fast-moving teams that need more power.",
+          "features": [
+            "Everything in Starter",
+            "Priority support",
+            "Advanced analytics",
+            "API access"
+          ],
+          "badge": {
+            "enabled": true,
+            "text": "Recommended"
+          },
+          "cta": {
+            "text": "",
+            "url": "",
+            "isNewTab": false
+          },
+          "accentColor": "",
+          "isVisible": true
+        },
+        {
+          "name": "Scale",
+          "upTo": 200,
+          "pricingMode": "perUnit",
+          "pricePerUnit": 3,
+          "flatPrice": 0,
+          "yearlyPricePerUnit": "",
+          "yearlyFlatPrice": "",
+          "description": "Volume pricing with enterprise-grade controls.",
+          "features": [
+            "Everything in Growth",
+            "SSO & audit logs",
+            "Dedicated CSM"
+          ],
+          "badge": {
+            "enabled": false,
+            "text": ""
+          },
+          "cta": {
+            "text": "",
+            "url": "",
+            "isNewTab": false
+          },
+          "accentColor": "",
+          "isVisible": true
+        }
+      ]
+    },
+    "billing": {
+      "type": "object",
+      "default": {
+        "enabled": true,
+        "monthlyLabel": "Monthly",
+        "yearlyLabel": "Yearly",
+        "yearlyDiscount": 20,
+        "saveBadge": {
+          "enabled": true,
+          "text": "Save 20%"
+        },
+        "defaultCycle": "monthly",
+        "style": "switch",
+        "yearlyAsMonthly": false
+      }
+    },
+    "priceFormat": {
+      "type": "object",
+      "default": {
+        "currency": "$",
+        "currencyPosition": "before",
+        "decimals": 2,
+        "decimalSeparator": ".",
+        "thousandsSeparator": ",",
+        "suffixMonthly": "/mo",
+        "suffixYearly": "/yr",
+        "note": "per workspace, cancel anytime",
+        "countUp": {
+          "enabled": true,
+          "duration": 350
+        }
+      }
+    },
+    "card": {
+      "type": "object",
+      "default": {
+        "enabled": true,
+        "showTierName": true,
+        "showDescription": true,
+        "showFeatures": true,
+        "showBadge": true,
+        "showUnitSummary": true,
+        "featureIcon": "check",
+        "cta": {
+          "enabled": true,
+          "text": "Get started",
+          "url": "#",
+          "isNewTab": false,
+          "appendParams": false
+        },
+        "position": "right"
+      }
+    },
+    "slider": {
+      "type": "object",
+      "default": {
+        "showTicks": true,
+        "showTierZones": true,
+        "showTierLabels": true,
+        "showMinMaxLabels": true,
+        "bubble": {
+          "enabled": true,
+          "style": "valueUnit"
+        },
+        "thumbStyle": "circle"
+      }
+    },
+    "overflow": {
+      "type": "object",
+      "default": {
+        "enabled": true,
+        "triggerLabel": "+",
+        "title": "Need more than 200 seats?",
+        "priceText": "Custom",
+        "description": "Tell us about your team and we will tailor a plan for you.",
+        "cta": {
+          "text": "Talk to sales",
+          "url": "#",
+          "isNewTab": false
+        }
+      }
+    },
+    "header": {
+      "type": "object",
+      "default": {
+        "enabled": true,
+        "title": "Pricing that scales with you",
+        "subtitle": "Drag the slider — pay only for the seats you use."
+      }
+    },
+    "layout": {
+      "type": "object",
+      "default": {
+        "preset": "split",
+        "contentWidth": {
+          "desktop": "100%",
+          "tablet": "100%",
+          "mobile": "100%"
+        },
+        "gap": {
+          "desktop": "40px",
+          "tablet": "28px",
+          "mobile": "22px"
+        },
+        "align": "left",
+        "stackOn": "tablet"
+      }
+    },
+    "styles": {
+      "type": "object",
+      "default": {
+        "container": {
+          "width": {
+            "desktop": "100%",
+            "tablet": "100%",
+            "mobile": "100%"
+          },
+          "bg": {
+            "type": "solid",
+            "color": "#f8fafc"
+          },
+          "border": {
+            "color": "#e2e8f0",
+            "width": "1px",
+            "style": "solid"
+          },
+          "radius": {
+            "top": "20px",
+            "right": "20px",
+            "bottom": "20px",
+            "left": "20px"
+          },
+          "shadow": [
+            {
+              "hOffset": "0px",
+              "vOffset": "18px",
+              "blur": "40px",
+              "spreed": "0px",
+              "color": "#6366f11f",
+              "isInset": false
+            }
+          ],
+          "padding": {
+            "desktop": {
+              "top": "40px",
+              "right": "40px",
+              "bottom": "40px",
+              "left": "40px"
+            },
+            "tablet": {
+              "top": "32px",
+              "right": "32px",
+              "bottom": "32px",
+              "left": "32px"
+            },
+            "mobile": {
+              "top": "24px",
+              "right": "16px",
+              "bottom": "24px",
+              "left": "16px"
+            }
+          }
+        },
+        "panel": {
+          "bg": {
+            "type": "solid",
+            "color": ""
+          },
+          "radius": {
+            "top": "16px",
+            "right": "16px",
+            "bottom": "16px",
+            "left": "16px"
+          },
+          "padding": {
+            "desktop": {
+              "top": "24px",
+              "right": "24px",
+              "bottom": "24px",
+              "left": "24px"
+            },
+            "tablet": {
+              "top": "20px",
+              "right": "20px",
+              "bottom": "20px",
+              "left": "20px"
+            },
+            "mobile": {
+              "top": "16px",
+              "right": "16px",
+              "bottom": "16px",
+              "left": "16px"
+            }
+          }
+        },
+        "track": {
+          "height": "10px",
+          "bg": "#e2e8f0",
+          "fill": {
+            "type": "gradient",
+            "color": "#6366f1",
+            "gradient": "linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%)"
+          },
+          "radius": "10px"
+        },
+        "thumb": {
+          "size": "24px",
+          "bg": "#ffffff",
+          "border": {
+            "color": "#6366f1",
+            "width": "3px",
+            "style": "solid"
+          },
+          "shadow": [
+            {
+              "hOffset": "0px",
+              "vOffset": "4px",
+              "blur": "12px",
+              "spreed": "0px",
+              "color": "#6366f159",
+              "isInset": false
+            }
+          ],
+          "ringColor": "#6366f133"
+        },
+        "bubble": {
+          "bg": "#0f172a",
+          "color": "#ffffff",
+          "typo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 600,
+            "fontVariant": "600",
+            "fontSize": {
+              "desktop": 12,
+              "tablet": 12,
+              "mobile": 11
+            }
+          },
+          "radius": {
+            "top": "8px",
+            "right": "8px",
+            "bottom": "8px",
+            "left": "8px"
+          },
+          "shadow": [
+            {
+              "hOffset": "0px",
+              "vOffset": "4px",
+              "blur": "10px",
+              "spreed": "0px",
+              "color": "#0f172a40",
+              "isInset": false
+            }
+          ]
+        },
+        "ticks": {
+          "color": "#cbd5e1",
+          "activeColor": "#6366f1",
+          "size": "8px"
+        },
+        "tierLabels": {
+          "typo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 700,
+            "fontVariant": "700",
+            "fontSize": {
+              "desktop": 11,
+              "tablet": 11,
+              "mobile": 10
+            },
+            "textTransform": "uppercase",
+            "letterSpace": "0.05em"
+          },
+          "color": "#94a3b8",
+          "activeColor": "#6366f1"
+        },
+        "unitLabel": {
+          "typo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 600,
+            "fontVariant": "600",
+            "fontSize": {
+              "desktop": 15,
+              "tablet": 15,
+              "mobile": 14
+            }
+          },
+          "color": "#334155"
+        },
+        "valueReadout": {
+          "typo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 800,
+            "fontVariant": "800",
+            "fontSize": {
+              "desktop": 32,
+              "tablet": 28,
+              "mobile": 24
+            }
+          },
+          "color": "#0f172a",
+          "unitColor": "#64748b"
+        },
+        "inputField": {
+          "bg": "#ffffff",
+          "border": {
+            "color": "#e2e8f0",
+            "width": "1px",
+            "style": "solid"
+          },
+          "color": "#0f172a"
+        },
+        "cardStyle": {
+          "bg": {
+            "type": "solid",
+            "color": "#ffffff"
+          },
+          "border": {
+            "color": "#e2e8f0",
+            "width": "1px",
+            "style": "solid"
+          },
+          "radius": {
+            "top": "16px",
+            "right": "16px",
+            "bottom": "16px",
+            "left": "16px"
+          },
+          "shadow": [
+            {
+              "hOffset": "0px",
+              "vOffset": "12px",
+              "blur": "32px",
+              "spreed": "0px",
+              "color": "#0f172a14",
+              "isInset": false
+            }
+          ],
+          "hoverShadow": [
+            {
+              "hOffset": "0px",
+              "vOffset": "18px",
+              "blur": "44px",
+              "spreed": "0px",
+              "color": "#6366f126",
+              "isInset": false
+            }
+          ],
+          "padding": {
+            "desktop": {
+              "top": "32px",
+              "right": "32px",
+              "bottom": "32px",
+              "left": "32px"
+            },
+            "tablet": {
+              "top": "26px",
+              "right": "26px",
+              "bottom": "26px",
+              "left": "26px"
+            },
+            "mobile": {
+              "top": "20px",
+              "right": "18px",
+              "bottom": "20px",
+              "left": "18px"
+            }
+          },
+          "ringColor": "#6366f1",
+          "ringWidth": "2px",
+          "wash": "#6366f10a"
+        },
+        "tierName": {
+          "typo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 800,
+            "fontVariant": "800",
+            "fontSize": {
+              "desktop": 13,
+              "tablet": 13,
+              "mobile": 12
+            },
+            "textTransform": "uppercase",
+            "letterSpace": "0.08em"
+          },
+          "color": "#6366f1"
+        },
+        "tierDesc": {
+          "typo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 400,
+            "fontVariant": "400",
+            "fontSize": {
+              "desktop": 14,
+              "tablet": 14,
+              "mobile": 13
+            }
+          },
+          "color": "#64748b"
+        },
+        "price": {
+          "typo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 800,
+            "fontVariant": "800",
+            "fontSize": {
+              "desktop": 48,
+              "tablet": 42,
+              "mobile": 36
+            }
+          },
+          "color": "#0f172a"
+        },
+        "priceSuffix": {
+          "typo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 600,
+            "fontVariant": "600",
+            "fontSize": {
+              "desktop": 16,
+              "tablet": 15,
+              "mobile": 14
+            }
+          },
+          "color": "#64748b"
+        },
+        "priceNote": {
+          "typo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 400,
+            "fontVariant": "400",
+            "fontSize": {
+              "desktop": 13,
+              "tablet": 13,
+              "mobile": 12
+            }
+          },
+          "color": "#94a3b8"
+        },
+        "oldPrice": {
+          "typo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 500,
+            "fontVariant": "500",
+            "fontSize": {
+              "desktop": 16,
+              "tablet": 15,
+              "mobile": 14
+            }
+          },
+          "color": "#94a3b8"
+        },
+        "features": {
+          "typo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 500,
+            "fontVariant": "500",
+            "fontSize": {
+              "desktop": 14,
+              "tablet": 14,
+              "mobile": 13
+            }
+          },
+          "color": "#334155",
+          "iconColor": "#10b981",
+          "rowGap": "10px"
+        },
+        "ctaBtn": {
+          "typo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 700,
+            "fontVariant": "700",
+            "fontSize": {
+              "desktop": 15,
+              "tablet": 15,
+              "mobile": 14
+            }
+          },
+          "color": "#ffffff",
+          "bg": {
+            "type": "gradient",
+            "color": "#6366f1",
+            "gradient": "linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)"
+          },
+          "hoverColor": "#ffffff",
+          "hoverBg": {
+            "type": "gradient",
+            "color": "#4f46e5",
+            "gradient": "linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%)"
+          },
+          "border": {
+            "color": "transparent",
+            "width": "0px",
+            "style": "solid"
+          },
+          "radius": {
+            "top": "12px",
+            "right": "12px",
+            "bottom": "12px",
+            "left": "12px"
+          },
+          "padding": {
+            "top": "14px",
+            "right": "24px",
+            "bottom": "14px",
+            "left": "24px"
+          },
+          "shadow": [
+            {
+              "hOffset": "0px",
+              "vOffset": "8px",
+              "blur": "20px",
+              "spreed": "0px",
+              "color": "#6366f140",
+              "isInset": false
+            }
+          ],
+          "hoverShadow": [
+            {
+              "hOffset": "0px",
+              "vOffset": "12px",
+              "blur": "28px",
+              "spreed": "0px",
+              "color": "#6366f159",
+              "isInset": false
+            }
+          ],
+          "fullWidth": true
+        },
+        "badge": {
+          "typo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 700,
+            "fontVariant": "700",
+            "fontSize": {
+              "desktop": 11,
+              "tablet": 11,
+              "mobile": 10
+            },
+            "textTransform": "uppercase",
+            "letterSpace": "0.06em"
+          },
+          "bg": "#6366f1",
+          "color": "#ffffff",
+          "radius": {
+            "top": "12px",
+            "right": "12px",
+            "bottom": "12px",
+            "left": "12px"
+          },
+          "padding": {
+            "top": "4px",
+            "right": "12px",
+            "bottom": "4px",
+            "left": "12px"
+          }
+        },
+        "toggle": {
+          "normal": {
+            "typo": {
+              "fontFamily": "Manrope",
+              "fontCategory": "sans-serif",
+              "fontWeight": 600,
+              "fontVariant": "600",
+              "fontSize": {
+                "desktop": 14,
+                "tablet": 14,
+                "mobile": 13
+              }
+            },
+            "color": "#64748b"
+          },
+          "active": {
+            "typo": {
+              "fontFamily": "Manrope",
+              "fontCategory": "sans-serif",
+              "fontWeight": 700,
+              "fontVariant": "700",
+              "fontSize": {
+                "desktop": 14,
+                "tablet": 14,
+                "mobile": 13
+              }
+            },
+            "color": "#0f172a"
+          },
+          "trackBg": "#e2e8f0",
+          "trackActiveBg": "#6366f1",
+          "knobColor": "#ffffff",
+          "saveBg": "#d1fae5",
+          "saveColor": "#047857",
+          "margin": {
+            "top": "0px",
+            "right": "0px",
+            "bottom": "28px",
+            "left": "0px"
+          }
+        },
+        "headerStyle": {
+          "titleTypo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 800,
+            "fontVariant": "800",
+            "fontSize": {
+              "desktop": 30,
+              "tablet": 26,
+              "mobile": 22
+            }
+          },
+          "titleColor": "#0f172a",
+          "subtitleTypo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 400,
+            "fontVariant": "400",
+            "fontSize": {
+              "desktop": 15,
+              "tablet": 14,
+              "mobile": 13
+            }
+          },
+          "subtitleColor": "#64748b",
+          "align": "center",
+          "margin": {
+            "top": "0px",
+            "right": "0px",
+            "bottom": "28px",
+            "left": "0px"
+          }
+        }
+      }
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false
+  },
+  "example": {
+    "attributes": {}
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "render": "file:./render.php",
+  "style": "file:./view.css",
+  "viewScript": "file:./view.js"
+}

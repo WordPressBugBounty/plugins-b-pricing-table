@@ -1,0 +1,1422 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "bptb/restaurant-pricing",
+  "title": "Restaurant & Catering Pricing",
+  "description": "Moody fine-dining catering pricing table with per-guest tiers, billing toggle, and a gold featured menu.",
+  "category": "widgets",
+  "version": "2.1.0",
+  "keywords": [
+    "pricing",
+    "restaurant",
+    "catering",
+    "menu",
+    "event",
+    "fine dining",
+    "pricing table",
+    "packages",
+    "billing toggle"
+  ],
+  "textdomain": "b-pricing-table",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "wide"
+    },
+    "themeStyle": {
+      "type": "object",
+      "default": {
+        "theme": "switchable"
+      }
+    },
+    "cycles": {
+      "type": "array",
+      "default": [
+        {
+          "isEnabled": true,
+          "cycle": "monthly",
+          "label": "Buffet",
+          "isDefault": true,
+          "hasDiscount": false,
+          "discountText": "Chef Plated"
+        },
+        {
+          "isEnabled": true,
+          "cycle": "annual",
+          "label": "Plated",
+          "isDefault": false,
+          "hasDiscount": true,
+          "discountText": "Chef Plated"
+        },
+        {
+          "isEnabled": false,
+          "cycle": "lifetime",
+          "label": "Lifetime",
+          "isDefault": false,
+          "hasDiscount": false,
+          "discountText": "Chef Plated"
+        }
+      ]
+    },
+    "pricingTables": {
+      "type": "array",
+      "default": [
+        {
+          "name": "The Social",
+          "nameIcon": {
+            "enabled": true,
+            "icon": "<svg fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M4 18h16M5.5 18a6.5 6.5 0 0113 0M12 8.2V6.5M12 6.5a1 1 0 100-2 1 1 0 000 2z\"/></svg>"
+          },
+          "price": 32,
+          "prices": {
+            "monthly": {
+              "amount": 32,
+              "label": "guest"
+            },
+            "annual": {
+              "amount": 46,
+              "label": "guest"
+            },
+            "lifetime": {
+              "amount": 65,
+              "label": "guest"
+            }
+          },
+          "priceCurrency": "$",
+          "period": "guest",
+          "isFeatured": false,
+          "id": false,
+          "description": "Relaxed buffet-style catering for casual gatherings.",
+          "link": "#",
+          "linkLabel": "Request a Quote",
+          "linkIcon": "<svg viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M17.707 9.293l-5-5a.999.999 0 10-1.414 1.414L14.586 9H3a1 1 0 100 2h11.586l-3.293 3.293a.999.999 0 101.414 1.414l5-5a.999.999 0 000-1.414z\"></path></svg>",
+          "isLinkNewTab": false,
+          "color": "#D6B26E",
+          "features": [
+            {
+              "isEnable": true,
+              "label": "Two seasonal mains"
+            },
+            {
+              "isEnable": true,
+              "label": "Three signature sides"
+            },
+            {
+              "isEnable": true,
+              "label": "Fresh bread & butter"
+            },
+            {
+              "isEnable": true,
+              "label": "Buffet setup & service ware"
+            },
+            {
+              "isEnable": false,
+              "label": "Dedicated on-site server"
+            },
+            {
+              "isEnable": false,
+              "label": "Plated table service"
+            }
+          ]
+        },
+        {
+          "name": "The Signature",
+          "nameIcon": {
+            "enabled": true,
+            "icon": "<svg fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M7 3v8a2 2 0 11-2 0V3m1 0v18M17 3c-1.7 0-3 2-3 5s1.3 4 3 4v9m0-9c1.7 0 3-1 3-4s-1.3-5-3-5z\"/></svg>"
+          },
+          "price": 58,
+          "prices": {
+            "monthly": {
+              "amount": 58,
+              "label": "guest"
+            },
+            "annual": {
+              "amount": 74,
+              "label": "guest"
+            },
+            "lifetime": {
+              "amount": 110,
+              "label": "guest"
+            }
+          },
+          "priceCurrency": "$",
+          "period": "guest",
+          "isFeatured": true,
+          "id": false,
+          "description": "Our most-booked menu — elevated dishes with full table service.",
+          "link": "#",
+          "linkLabel": "Reserve This Menu",
+          "linkIcon": "<svg viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M17.707 9.293l-5-5a.999.999 0 10-1.414 1.414L14.586 9H3a1 1 0 100 2h11.586l-3.293 3.293a.999.999 0 101.414 1.414l5-5a.999.999 0 000-1.414z\"></path></svg>",
+          "isLinkNewTab": false,
+          "color": "#D6B26E",
+          "features": [
+            {
+              "isEnable": true,
+              "label": "Three premium mains"
+            },
+            {
+              "isEnable": true,
+              "label": "Five chef sides & salads"
+            },
+            {
+              "isEnable": true,
+              "label": "Artisan bread service"
+            },
+            {
+              "isEnable": true,
+              "label": "Dedicated on-site servers"
+            },
+            {
+              "isEnable": true,
+              "label": "Plated table service"
+            },
+            {
+              "isEnable": true,
+              "label": "Seasonal dessert course"
+            },
+            {
+              "isEnable": false,
+              "label": "Sommelier wine pairing"
+            }
+          ],
+          "isCustomStyle": false,
+          "colors": {
+            "bg": {},
+            "name": "",
+            "nameIcon": "",
+            "price": "",
+            "period": "",
+            "description": "",
+            "features": "",
+            "check": "",
+            "unCheck": "",
+            "checkUnCheckBG": "",
+            "button": {},
+            "buttonHover": {}
+          },
+          "hovColors": {
+            "bg": {},
+            "name": "",
+            "nameIcon": "",
+            "price": "",
+            "period": "",
+            "description": "",
+            "features": "",
+            "check": "",
+            "unCheck": "",
+            "checkUnCheckBG": "",
+            "button": {},
+            "buttonHover": {}
+          }
+        },
+        {
+          "name": "The Grand",
+          "nameIcon": {
+            "enabled": true,
+            "icon": "<svg fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" viewBox=\"0 0 24 24\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M7 3h10l-1 6a4 4 0 01-8 0L7 3zM12 13v6M8 21h8\"/></svg>"
+          },
+          "price": 89,
+          "prices": {
+            "monthly": {
+              "amount": 89,
+              "label": "guest"
+            },
+            "annual": {
+              "amount": 118,
+              "label": "guest"
+            },
+            "lifetime": {
+              "amount": 175,
+              "label": "guest"
+            }
+          },
+          "priceCurrency": "$",
+          "period": "guest",
+          "isFeatured": false,
+          "id": false,
+          "description": "A full fine-dining experience for weddings & milestone events.",
+          "link": "#",
+          "linkLabel": "Book a Tasting",
+          "linkIcon": "<svg viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M17.707 9.293l-5-5a.999.999 0 10-1.414 1.414L14.586 9H3a1 1 0 100 2h11.586l-3.293 3.293a.999.999 0 101.414 1.414l5-5a.999.999 0 000-1.414z\"></path></svg>",
+          "isLinkNewTab": false,
+          "color": "#D6B26E",
+          "features": [
+            {
+              "isEnable": true,
+              "label": "Five-course tasting menu"
+            },
+            {
+              "isEnable": true,
+              "label": "Premium proteins & raw bar"
+            },
+            {
+              "isEnable": true,
+              "label": "Full chef & server team"
+            },
+            {
+              "isEnable": true,
+              "label": "Plated multi-course service"
+            },
+            {
+              "isEnable": true,
+              "label": "Sommelier wine pairing"
+            },
+            {
+              "isEnable": true,
+              "label": "Custom menu consultation"
+            },
+            {
+              "isEnable": true,
+              "label": "Event styling & linens"
+            }
+          ],
+          "isCustomStyle": false,
+          "colors": {
+            "bg": {},
+            "name": "",
+            "nameIcon": "",
+            "price": "",
+            "period": "",
+            "description": "",
+            "features": "",
+            "check": "",
+            "unCheck": "",
+            "checkUnCheckBG": "",
+            "button": {},
+            "buttonHover": {}
+          },
+          "hovColors": {
+            "bg": {},
+            "name": "",
+            "nameIcon": "",
+            "price": "",
+            "period": "",
+            "description": "",
+            "features": "",
+            "check": "",
+            "unCheck": "",
+            "checkUnCheckBG": "",
+            "button": {},
+            "buttonHover": {}
+          }
+        }
+      ]
+    },
+    "featuresColumn": {
+      "type": "object",
+      "default": {
+        "desktop": 1,
+        "tablet": 1,
+        "mobile": 1
+      }
+    },
+    "options": {
+      "type": "object",
+      "default": {
+        "featuredText": "CHEF'S CHOICE",
+        "bg": "#6E2B2B",
+        "color": "#F7F2E9",
+        "popularTypo": {
+          "fontFamily": "Manrope",
+          "fontCategory": "sans-serif",
+          "fontWeight": 600,
+          "fontVariant": "600",
+          "fontSize": {
+            "desktop": 11,
+            "tablet": 11,
+            "mobile": 11
+          },
+          "fontStyle": "",
+          "textTransform": "uppercase",
+          "textDecoration": "",
+          "lineHeight": "",
+          "letterSpace": ""
+        },
+        "popularRadius": {
+          "top": "12px",
+          "right": "12px",
+          "bottom": "12px",
+          "left": "12px"
+        },
+        "popularPadding": {
+          "desktop": {
+            "top": "6px",
+            "right": "16px",
+            "bottom": "6px",
+            "left": "16px"
+          },
+          "tablet": {
+            "top": "6px",
+            "right": "16px",
+            "bottom": "6px",
+            "left": "16px"
+          },
+          "mobile": {
+            "top": "6px",
+            "right": "16px",
+            "bottom": "6px",
+            "left": "16px"
+          }
+        },
+        "popularMargin": {
+          "desktop": {
+            "top": "0px",
+            "right": "0px",
+            "bottom": "16px",
+            "left": "0px"
+          },
+          "tablet": {
+            "top": "0px",
+            "right": "0px",
+            "bottom": "16px",
+            "left": "0px"
+          },
+          "mobile": {
+            "top": "0px",
+            "right": "0px",
+            "bottom": "16px",
+            "left": "0px"
+          }
+        }
+      }
+    },
+    "columns": {
+      "type": "object",
+      "default": {
+        "desktop": 3,
+        "tablet": 2,
+        "mobile": 1
+      }
+    },
+    "columnGap": {
+      "type": "string",
+      "default": "30px"
+    },
+    "rowGap": {
+      "type": "string",
+      "default": "30px"
+    },
+    "textAlign": {
+      "type": "string",
+      "default": "left"
+    },
+    "padding": {
+      "type": "object",
+      "default": {
+        "vertical": "40px",
+        "horizontal": "25px"
+      }
+    },
+    "shadow": {
+      "type": "object",
+      "default": {
+        "blur": "40px",
+        "color": "#00000066"
+      }
+    },
+    "cyclesStyle": {
+      "type": "object",
+      "default": {
+        "normal": {
+          "bgColor": "#D6B16D38"
+        },
+        "radius": {
+          "top": "28px",
+          "right": "28px",
+          "bottom": "28px",
+          "left": "28px"
+        },
+        "border": {
+          "color": "transparent",
+          "width": "0px",
+          "style": "solid"
+        },
+        "width": "40%",
+        "buttonRadius": {
+          "top": "28px",
+          "right": "28px",
+          "bottom": "28px",
+          "left": "28px"
+        },
+        "active": {
+          "typo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 600,
+            "fontVariant": "600",
+            "fontSize": {
+              "desktop": 14,
+              "tablet": 14,
+              "mobile": 14
+            },
+            "fontStyle": "",
+            "textTransform": "",
+            "textDecoration": "",
+            "lineHeight": "",
+            "letterSpace": ""
+          },
+          "bgColor": "#D6B26E",
+          "color": "#1A1614",
+          "shadow": {
+            "color": "rgba(214, 178, 110, 0.35)",
+            "hOffset": "0px",
+            "vOffset": "4px",
+            "blur": "14px",
+            "spreed": "0px",
+            "isInset": false
+          }
+        },
+        "inActive": {
+          "bgColor": "#D6B16D42",
+          "color": "#140F0F",
+          "typo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 600,
+            "fontVariant": "600",
+            "fontSize": {
+              "desktop": 14,
+              "tablet": 14,
+              "mobile": 14
+            },
+            "fontStyle": "normal",
+            "textTransform": "none",
+            "textDecoration": "auto",
+            "lineHeight": "22px",
+            "letterSpace": "0px"
+          }
+        },
+        "discount": {
+          "typo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 700,
+            "fontVariant": "700",
+            "fontSize": {
+              "desktop": 11,
+              "tablet": 11,
+              "mobile": 11
+            },
+            "fontStyle": "",
+            "textTransform": "",
+            "textDecoration": "",
+            "lineHeight": "",
+            "letterSpace": ""
+          },
+          "bgColor": "#14cb6de0",
+          "color": "#111111",
+          "radius": {
+            "top": "28px",
+            "right": "28px",
+            "bottom": "28px",
+            "left": "28px"
+          }
+        }
+      }
+    },
+    "styles": {
+      "type": "object",
+      "default": {
+        "secBgColor": "#00000000",
+        "secRadius": {
+          "top": "0px",
+          "right": "0px",
+          "bottom": "0px",
+          "left": "0px"
+        },
+        "secPadding": {
+          "desktop": {
+            "top": "0px",
+            "right": "0px",
+            "bottom": "0px",
+            "left": "0px"
+          },
+          "tablet": {
+            "top": "0px",
+            "right": "0px",
+            "bottom": "0px",
+            "left": "0px"
+          },
+          "mobile": {
+            "top": "0px",
+            "right": "0px",
+            "bottom": "0px",
+            "left": "0px"
+          }
+        },
+        "width ": "",
+        "columns": {
+          "desktop": 3,
+          "tablet": 2,
+          "mobile": 1
+        },
+        "columnGap": {
+          "desktop": "30px",
+          "tablet": "22px",
+          "mobile": "16px"
+        },
+        "rowGap": {
+          "desktop": "22px",
+          "tablet": "0",
+          "mobile": "0"
+        },
+        "backgroundColor": "#262019",
+        "featuresBackgroundColor": "#262019",
+        "radius": {
+          "top": "14px",
+          "right": "14px",
+          "bottom": "14px",
+          "left": "14px"
+        },
+        "shadow": {
+          "color": "rgba(0, 0, 0, 0.6)",
+          "hOffset": "0px",
+          "vOffset": "16px",
+          "blur": "40px",
+          "spreed": "-22px",
+          "isInset": false
+        },
+        "border": {
+          "color": "rgba(214, 178, 110, 0.18)",
+          "width": "1px",
+          "style": "solid"
+        },
+        "padding": {
+          "desktop": {
+            "top": "",
+            "right": "",
+            "bottom": "",
+            "left": ""
+          },
+          "tablet": {
+            "top": "",
+            "right": "",
+            "bottom": "",
+            "left": ""
+          },
+          "mobile": {
+            "top": "",
+            "right": "",
+            "bottom": "",
+            "left": ""
+          }
+        },
+        "cardPadding": {
+          "desktop": {
+            "top": "38px",
+            "right": "38px",
+            "bottom": "38px",
+            "left": "38px"
+          },
+          "tablet": {
+            "top": "32px",
+            "right": "32px",
+            "bottom": "32px",
+            "left": "32px"
+          },
+          "mobile": {
+            "top": "28px",
+            "right": "28px",
+            "bottom": "28px",
+            "left": "28px"
+          }
+        },
+        "nameTypo": {
+          "fontFamily": "Playfair Display",
+          "fontCategory": "serif",
+          "fontWeight": 600,
+          "fontVariant": "600",
+          "fontSize": {
+            "desktop": 24,
+            "tablet": 23,
+            "mobile": 22
+          },
+          "fontStyle": "",
+          "textTransform": "",
+          "textDecoration": "",
+          "lineHeight": "",
+          "letterSpace": ""
+        },
+        "nameColor": "#F1E9DC",
+        "nameMargin": {
+          "desktop": {
+            "top": "",
+            "right": "",
+            "bottom": "",
+            "left": ""
+          },
+          "tablet": {
+            "top": "",
+            "right": "",
+            "bottom": "",
+            "left": ""
+          },
+          "mobile": {
+            "top": "",
+            "right": "",
+            "bottom": "",
+            "left": ""
+          }
+        },
+        "nameIconSize": "22px",
+        "nameIconColor": "#D6B26E",
+        "currencyTypo": {
+          "fontFamily": "Manrope",
+          "fontCategory": "sans-serif",
+          "fontWeight": 600,
+          "fontVariant": "600",
+          "fontSize": {
+            "desktop": 23,
+            "tablet": 22,
+            "mobile": 20
+          },
+          "fontStyle": "",
+          "textTransform": "",
+          "textDecoration": "",
+          "lineHeight": "",
+          "letterSpace": ""
+        },
+        "amountTypo": {
+          "fontFamily": "Playfair Display",
+          "fontCategory": "serif",
+          "fontWeight": 700,
+          "fontVariant": "700",
+          "fontSize": {
+            "desktop": 54,
+            "tablet": 48,
+            "mobile": 42
+          },
+          "fontStyle": "",
+          "textTransform": "",
+          "textDecoration": "",
+          "lineHeight": "",
+          "letterSpace": ""
+        },
+        "amountColor": "#F1E9DC",
+        "amountMarging": {
+          "desktop": {
+            "top": "",
+            "right": "",
+            "bottom": "",
+            "left": ""
+          },
+          "tablet": {
+            "top": "",
+            "right": "",
+            "bottom": "",
+            "left": ""
+          },
+          "mobile": {
+            "top": "",
+            "right": "",
+            "bottom": "",
+            "left": ""
+          }
+        },
+        "periodTypo": {
+          "fontFamily": "Manrope",
+          "fontCategory": "sans-serif",
+          "fontWeight": 500,
+          "fontVariant": "500",
+          "fontSize": {
+            "desktop": 14,
+            "tablet": 14,
+            "mobile": 14
+          },
+          "fontStyle": "",
+          "textTransform": "",
+          "textDecoration": "",
+          "lineHeight": "",
+          "letterSpace": ""
+        },
+        "periodColor": "#D6B26E",
+        "periodMargin": {
+          "desktop": {
+            "top": "0px",
+            "right": "0px",
+            "bottom": "0px",
+            "left": "4px"
+          },
+          "tablet": {
+            "top": "0px",
+            "right": "0px",
+            "bottom": "0px",
+            "left": "4px"
+          },
+          "mobile": {
+            "top": "0px",
+            "right": "0px",
+            "bottom": "0px",
+            "left": "4px"
+          }
+        },
+        "periodGap": "4px",
+        "desTypo": {
+          "fontFamily": "Manrope",
+          "fontCategory": "sans-serif",
+          "fontWeight": 400,
+          "fontVariant": "400",
+          "fontSize": {
+            "desktop": 15,
+            "tablet": 15,
+            "mobile": 14
+          },
+          "fontStyle": "",
+          "textTransform": "",
+          "textDecoration": "",
+          "lineHeight": "",
+          "letterSpace": ""
+        },
+        "desColor": "#C7BCA9",
+        "desMargin": {
+          "desktop": {
+            "top": "8px",
+            "right": "0px",
+            "bottom": "20px",
+            "left": "0px"
+          },
+          "tablet": {
+            "top": "8px",
+            "right": "0px",
+            "bottom": "20px",
+            "left": "0px"
+          },
+          "mobile": {
+            "top": "8px",
+            "right": "0px",
+            "bottom": "20px",
+            "left": "0px"
+          }
+        },
+        "features": {
+          "checkmarkGlobalColor": "#D6B26E",
+          "uncheckColor": "#EE1010",
+          "typo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 500,
+            "fontVariant": "500",
+            "fontSize": {
+              "desktop": 15,
+              "tablet": 15,
+              "mobile": 15
+            },
+            "fontStyle": "",
+            "textTransform": "",
+            "textDecoration": "",
+            "lineHeight": "",
+            "letterSpace": ""
+          },
+          "color": "#C7BCA9",
+          "padding": {
+            "desktop": {
+              "top": "32px",
+              "right": "32px",
+              "bottom": "32px",
+              "left": "32px"
+            },
+            "tablet": {
+              "top": "32px",
+              "right": "32px",
+              "bottom": "32px",
+              "left": "32px"
+            },
+            "mobile": {
+              "top": "32px",
+              "right": "32px",
+              "bottom": "32px",
+              "left": "32px"
+            }
+          },
+          "margin": {
+            "desktop": {
+              "top": "0px",
+              "right": "0px",
+              "bottom": "14px",
+              "left": "0px"
+            },
+            "tablet": {
+              "top": "0px",
+              "right": "0px",
+              "bottom": "14px",
+              "left": "0px"
+            },
+            "mobile": {
+              "top": "0px",
+              "right": "0px",
+              "bottom": "14px",
+              "left": "0px"
+            }
+          },
+          "iconMargin": {
+            "desktop": {
+              "top": "0px",
+              "right": "12px",
+              "bottom": "0px",
+              "left": "0px"
+            },
+            "tablet": {
+              "top": "0px",
+              "right": "12px",
+              "bottom": "0px",
+              "left": "0px"
+            },
+            "mobile": {
+              "top": "0px",
+              "right": "12px",
+              "bottom": "0px",
+              "left": "0px"
+            }
+          },
+          "iconPadding": {
+            "desktop": {
+              "top": "9px",
+              "right": "9px",
+              "bottom": "9px",
+              "left": "9px"
+            },
+            "tablet": {
+              "top": "9px",
+              "right": "9px",
+              "bottom": "9px",
+              "left": "9px"
+            },
+            "mobile": {
+              "top": "9px",
+              "right": "9px",
+              "bottom": "9px",
+              "left": "9px"
+            }
+          },
+          "iconBorder": {
+            "color": "transparent",
+            "width": "0px",
+            "style": "solid",
+            "side": "all",
+            "radius": "50%"
+          },
+          "iconBg": "rgba(214, 178, 110, 0.16)",
+          "featureIconGap": "12px",
+          "featurelistGap": "15px",
+          "checkmarkWidth": "14px",
+          "uncheckHight": "14px"
+        },
+        "buttonStyle": {
+          "padding": {
+            "desktop": {
+              "top": "14px",
+              "right": "18px",
+              "bottom": "14px",
+              "left": "18px"
+            },
+            "tablet": {
+              "top": "14px",
+              "right": "18px",
+              "bottom": "14px",
+              "left": "18px"
+            },
+            "mobile": {
+              "top": "14px",
+              "right": "18px",
+              "bottom": "14px",
+              "left": "18px"
+            }
+          },
+          "typo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 600,
+            "fontVariant": "600",
+            "fontSize": {
+              "desktop": 16,
+              "tablet": 16,
+              "mobile": 15
+            },
+            "fontStyle": "",
+            "textTransform": "",
+            "textDecoration": "",
+            "lineHeight": "",
+            "letterSpace": ""
+          },
+          "color": "#D6B26E",
+          "hoverTextColor": "#1A1614",
+          "iconColor": "#D6B26E",
+          "iconHoverColor": "#1A1614",
+          "iconSize": "16px",
+          "iconGap": "6px",
+          "shadow": {
+            "hOffset": "0px",
+            "vOffset": "2px",
+            "blur": "8px",
+            "spreed": "-2px",
+            "color": "rgba(0, 0, 0, 0.25)",
+            "isInset": false
+          },
+          "bgColor": "rgba(0, 0, 0, 0)",
+          "bgHover": "#D6B26E",
+          "bgHoverTextColor": "#1A1614",
+          "borderAndRadius": {
+            "color": "#D6B26E",
+            "width": "1px",
+            "style": "solid",
+            "side": "all",
+            "radius": "10px"
+          },
+          "radius": {
+            "top": "10px",
+            "right": "10px",
+            "bottom": "10px",
+            "left": "10px"
+          },
+          "border": {
+            "color": "#D6B26E",
+            "width": "1px",
+            "style": "solid"
+          }
+        },
+        "featured": {
+          "featuredBgColor": "#F7F2E9",
+          "featuredBackgroundColor": "#F7F2E9",
+          "featuredRadius": {
+            "top": "16px",
+            "right": "16px",
+            "bottom": "16px",
+            "left": "16px"
+          },
+          "featuredBorder": {
+            "color": "#D6B26E",
+            "width": "2px",
+            "style": "solid"
+          },
+          "featuredPadding": {
+            "desktop": {
+              "top": "38px",
+              "right": "38px",
+              "bottom": "38px",
+              "left": "38px"
+            },
+            "tablet": {
+              "top": "32px",
+              "right": "32px",
+              "bottom": "32px",
+              "left": "32px"
+            },
+            "mobile": {
+              "top": "28px",
+              "right": "28px",
+              "bottom": "28px",
+              "left": "28px"
+            }
+          },
+          "featuredShadow": {
+            "hOffset": "0px",
+            "vOffset": "28px",
+            "blur": "56px",
+            "spreed": "-20px",
+            "color": "rgba(0, 0, 0, 0.5)",
+            "isInset": false
+          },
+          "gradientColor": {
+            "type": "linear",
+            "radialType": "circle",
+            "colors": [
+              {
+                "color": "#F7F2E9",
+                "position": 0
+              },
+              {
+                "color": "#F7F2E9",
+                "position": 100
+              }
+            ],
+            "centerPositions": {
+              "x": 0,
+              "y": 0
+            },
+            "angel": 180
+          },
+          "titleIconSize": "22px",
+          "titleIconColor": "#B58A3E",
+          "titleTypo": {
+            "fontFamily": "Playfair Display",
+            "fontCategory": "serif",
+            "fontWeight": 600,
+            "fontVariant": "600",
+            "fontSize": {
+              "desktop": 24,
+              "tablet": 23,
+              "mobile": 22
+            },
+            "fontStyle": "",
+            "textTransform": "",
+            "textDecoration": "",
+            "lineHeight": "1.2",
+            "letterSpace": ""
+          },
+          "titleColor": "#26201A",
+          "titleMargin": {
+            "desktop": {
+              "top": "0px",
+              "right": "0px",
+              "bottom": "8px",
+              "left": "0px"
+            },
+            "tablet": {
+              "top": "0px",
+              "right": "0px",
+              "bottom": "8px",
+              "left": "0px"
+            },
+            "mobile": {
+              "top": "0px",
+              "right": "0px",
+              "bottom": "8px",
+              "left": "0px"
+            }
+          },
+          "currencyTypo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 600,
+            "fontVariant": "600",
+            "fontSize": {
+              "desktop": 23,
+              "tablet": 22,
+              "mobile": 20
+            },
+            "fontStyle": "",
+            "textTransform": "",
+            "textDecoration": "",
+            "lineHeight": "",
+            "letterSpace": ""
+          },
+          "amountTypo": {
+            "fontFamily": "Playfair Display",
+            "fontCategory": "serif",
+            "fontWeight": 700,
+            "fontVariant": "700",
+            "fontSize": {
+              "desktop": 58,
+              "tablet": 52,
+              "mobile": 44
+            },
+            "fontStyle": "",
+            "textTransform": "",
+            "textDecoration": "",
+            "lineHeight": "",
+            "letterSpace": ""
+          },
+          "amountColor": "#26201A",
+          "priceMarging": {
+            "desktop": {
+              "top": "0px",
+              "right": "0px",
+              "bottom": "4px",
+              "left": "0px"
+            },
+            "tablet": {
+              "top": "0px",
+              "right": "0px",
+              "bottom": "4px",
+              "left": "0px"
+            },
+            "mobile": {
+              "top": "0px",
+              "right": "0px",
+              "bottom": "4px",
+              "left": "0px"
+            }
+          },
+          "periodTypo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 500,
+            "fontVariant": "500",
+            "fontSize": {
+              "desktop": 14,
+              "tablet": 14,
+              "mobile": 14
+            },
+            "fontStyle": "",
+            "textTransform": "",
+            "textDecoration": "",
+            "lineHeight": "",
+            "letterSpace": ""
+          },
+          "periodColor": "#B58A3E",
+          "periodMargin": {
+            "desktop": {
+              "top": "0px",
+              "right": "0px",
+              "bottom": "0px",
+              "left": "4px"
+            },
+            "tablet": {
+              "top": "0px",
+              "right": "0px",
+              "bottom": "0px",
+              "left": "4px"
+            },
+            "mobile": {
+              "top": "0px",
+              "right": "0px",
+              "bottom": "0px",
+              "left": "4px"
+            }
+          },
+          "periodGap": "4px",
+          "desColor": "#5E5246",
+          "desTypo": {
+            "fontFamily": "Manrope",
+            "fontCategory": "sans-serif",
+            "fontWeight": 400,
+            "fontVariant": "400",
+            "fontSize": {
+              "desktop": 15,
+              "tablet": 15,
+              "mobile": 14
+            },
+            "fontStyle": "",
+            "textTransform": "",
+            "textDecoration": "",
+            "lineHeight": "",
+            "letterSpace": ""
+          },
+          "desMargin": {
+            "desktop": {
+              "top": "8px",
+              "right": "0px",
+              "bottom": "20px",
+              "left": "0px"
+            },
+            "tablet": {
+              "top": "8px",
+              "right": "0px",
+              "bottom": "20px",
+              "left": "0px"
+            },
+            "mobile": {
+              "top": "8px",
+              "right": "0px",
+              "bottom": "20px",
+              "left": "0px"
+            }
+          },
+          "features": {
+            "checkmarkGlobalColor": "#B58A3E",
+            "uncheckColor": "#EE1010",
+            "typo": {
+              "fontFamily": "Manrope",
+              "fontCategory": "sans-serif",
+              "fontWeight": 500,
+              "fontVariant": "500",
+              "fontSize": {
+                "desktop": 15,
+                "tablet": 15,
+                "mobile": 15
+              },
+              "fontStyle": "",
+              "textTransform": "",
+              "textDecoration": "",
+              "lineHeight": "",
+              "letterSpace": ""
+            },
+            "featureColor": "#4A4036",
+            "color": "#4A4036",
+            "padding": {
+              "desktop": {
+                "top": "32px",
+                "right": "32px",
+                "bottom": "32px",
+                "left": "32px"
+              },
+              "tablet": {
+                "top": "32px",
+                "right": "32px",
+                "bottom": "32px",
+                "left": "32px"
+              },
+              "mobile": {
+                "top": "32px",
+                "right": "32px",
+                "bottom": "32px",
+                "left": "32px"
+              }
+            },
+            "margin": {
+              "desktop": {
+                "top": "0px",
+                "right": "0px",
+                "bottom": "14px",
+                "left": "0px"
+              },
+              "tablet": {
+                "top": "0px",
+                "right": "0px",
+                "bottom": "14px",
+                "left": "0px"
+              },
+              "mobile": {
+                "top": "0px",
+                "right": "0px",
+                "bottom": "14px",
+                "left": "0px"
+              }
+            },
+            "iconMargin": {
+              "desktop": {
+                "top": "0px",
+                "right": "12px",
+                "bottom": "0px",
+                "left": "0px"
+              },
+              "tablet": {
+                "top": "0px",
+                "right": "12px",
+                "bottom": "0px",
+                "left": "0px"
+              },
+              "mobile": {
+                "top": "0px",
+                "right": "12px",
+                "bottom": "0px",
+                "left": "0px"
+              }
+            },
+            "iconPadding": {
+              "desktop": {
+                "top": "9px",
+                "right": "9px",
+                "bottom": "9px",
+                "left": "9px"
+              },
+              "tablet": {
+                "top": "9px",
+                "right": "9px",
+                "bottom": "9px",
+                "left": "9px"
+              },
+              "mobile": {
+                "top": "9px",
+                "right": "9px",
+                "bottom": "9px",
+                "left": "9px"
+              }
+            },
+            "iconBorder": {
+              "color": "transparent",
+              "width": "0px",
+              "style": "solid",
+              "side": "all",
+              "radius": "50%"
+            },
+            "iconBg": "rgba(214, 178, 110, 0.20)",
+            "featurelistGap": "15px",
+            "featureIconGap": "12px",
+            "uncheckHight": "14px",
+            "checkmarkWidth": "14px"
+          },
+          "buttonStyle": {
+            "typo": {
+              "fontFamily": "Manrope",
+              "fontCategory": "sans-serif",
+              "fontWeight": 700,
+              "fontVariant": "700",
+              "fontSize": {
+                "desktop": 16,
+                "tablet": 16,
+                "mobile": 15
+              },
+              "fontStyle": "",
+              "textTransform": "",
+              "textDecoration": "",
+              "lineHeight": "",
+              "letterSpace": ""
+            },
+            "color": "#26201A",
+            "textHoverColor": "#F7F2E9",
+            "hoverTextColor": "#F7F2E9",
+            "iconColor": "#26201A",
+            "iconHoverColor": "#F7F2E9",
+            "iconSize": "16px",
+            "iconGap": "6px",
+            "shadow": {
+              "hOffset": "0px",
+              "vOffset": "8px",
+              "blur": "20px",
+              "spreed": "-6px",
+              "color": "rgba(214, 178, 110, 0.4)",
+              "isInset": false
+            },
+            "bgColor": "#D6B26E",
+            "bgHover": "#6E2B2B",
+            "bgHoverColor": "#6E2B2B",
+            "borderAndRadius": {
+              "color": "#D6B26E",
+              "width": "1px",
+              "style": "solid",
+              "side": "all",
+              "radius": "10px"
+            },
+            "radius": {
+              "top": "10px",
+              "right": "10px",
+              "bottom": "10px",
+              "left": "10px"
+            },
+            "padding": {
+              "desktop": {
+                "top": "14px",
+                "right": "18px",
+                "bottom": "14px",
+                "left": "18px"
+              },
+              "tablet": {
+                "top": "14px",
+                "right": "18px",
+                "bottom": "14px",
+                "left": "18px"
+              },
+              "mobile": {
+                "top": "14px",
+                "right": "18px",
+                "bottom": "14px",
+                "left": "18px"
+              }
+            },
+            "border": {
+              "color": "#D6B26E",
+              "width": "1px",
+              "style": "solid"
+            }
+          }
+        }
+      }
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false
+  },
+  "example": {
+    "attributes": {
+      "columns": {
+        "desktop": 3,
+        "tablet": 2,
+        "mobile": 1
+      }
+    }
+  },
+  "editorScript": [
+    "file:./index.js",
+    "wp-api"
+  ],
+  "editorStyle": "file:./index.css",
+  "render": "file:./render.php",
+  "style": "file:./view.css",
+  "viewScript": "file:./view.js"
+}

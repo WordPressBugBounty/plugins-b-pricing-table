@@ -28,26 +28,24 @@ class BPTB_Shortcode {
 				'not_found'		=> __( 'Sorry, we couldn\'t find the ShortCode you are looking for.', 'b-pricing-table' )
 			],
 			'public'				=> false,
-			'show_ui'				=> true,
-			'show_in_rest'			=> true,
-			'publicly_queryable'	=> false,
+			'show_ui'				=> true, //editor a shortcode ui show or not
+			'show_in_rest'			=> true, //If true, blocks can be used in Gutenberg. If false, posts will only be displayed in the classic editor.
+			'publicly_queryable'	=> false, //mane frontend shortcode aer ui ta dekabe ki na
 			'show_in_menu'			=> 'b-pricing-table',
 			'exclude_from_search'	=> true,
 			'menu_position'			=> 14,
-			'has_archive'			=> false,
+			'has_archive'			=> false, //false
 			'hierarchical'			=> false,
 			'capability_type'		=> 'page',
 			'rewrite'				=> [ 'slug' => 'bptb' ],
 			'supports'				=> [ 'title', 'editor' ],
 			'template' => [ [ 'bptb/pricing-table' ] ],
 			'template_lock'			=> 'all',
-		] );
+		] ); // Register Post Type
 	}
 
 	function onAddShortcode( $atts ) {
-		$atts = shortcode_atts(['id' => 0], $atts, 'bptb');
-		// $post_id = $atts['id'];
-		$post_id = intval($atts['id']);
+		$post_id = $atts['id'];
 		$post = get_post( $post_id );
 
 		if ( !$post ) {
@@ -61,6 +59,7 @@ class BPTB_Shortcode {
 		switch ( $post->post_status ) {
 			case 'publish':
 				return $this->displayContent( $post );
+
 			case 'private':
 				if ( current_user_can( 'read_private_posts' ) ) {
 					return $this->displayContent( $post );
@@ -103,6 +102,9 @@ class BPTB_Shortcode {
 		}
 	}
 
+	// তুমি দুইটিই রাখলে—'show_in_rest' => true → Gutenberg স্বাভাবিকভাবে চলবে. use_block_editor_for_post → নিশ্চিত করে যে কোনো conflict থাকলেও Gutenberg এই CPT এর জন্য active থাকবে
+	// যদি show_in_rest = true → filter technically লাগবে না, tobe  শুধু safety বা future-proofing জন্য রাখা হতে পারে।
+
 	function useBlockEditorForPost( $use, $post ){
 		if ( is_object( $post ) && isset( $post->post_type ) && $this->post_type === $post->post_type ) {
 			return true;
@@ -110,12 +112,13 @@ class BPTB_Shortcode {
 		return $use;
 	}
 
-	function adminEnqueueScripts( $hook ){
+  function adminEnqueueScripts( $hook ){
 		if( 'edit.php' === $hook || 'post.php' === $hook ){
 			wp_enqueue_style( 'bptb-admin-post', BPTB_DIR_URL . 'build/admin-post.css', [], BPTB_VERSION );
 			wp_enqueue_script( 'bptb-admin-post', BPTB_DIR_URL . 'build/admin-post.js', [], BPTB_VERSION, true );
 			wp_set_script_translations( 'bptb-admin-post', 'b-pricing-table', BPTB_DIR_PATH . 'languages' );
 	  }
 	}
+
 }
 new BPTB_Shortcode();
