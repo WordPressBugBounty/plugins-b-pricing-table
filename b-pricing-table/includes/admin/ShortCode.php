@@ -40,7 +40,7 @@ class BPTB_Shortcode {
 			'rewrite'				=> [ 'slug' => 'bptb' ],
 			'supports'				=> [ 'title', 'editor' ],
 			'template' => [ [ 'bptb/pricing-table' ] ],
-			'template_lock'			=> 'all',
+			// 'template_lock'			=> 'all',
 		] ); // Register Post Type
 	}
 

@@ -4,7 +4,7 @@ Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, pricing table, price list, gutenberg-blocks, product pricing
 Requires at least: 6.5+
 Tested up to: 7.0
-Stable tag: 2.1.0
+Stable tag: 2.1.2
 Requires PHP: 7.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html 
@@ -185,8 +185,14 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Changelog ==
-  
- = 2.1.0 - 24 June 2026 =
+
+= 2.1.2 - 28 June 2026 =  
+* Fix: Shortcode Bug Fixed
+
+= 2.1.1 - 28 June 2026 =   
+* Improvement: Admin Dashboard Updated
+
+= 2.1.0 - 24 June 2026 =
 * New: Added 14 new industry-specific Pro Pricing Card blocks (Agency, CouponBox, Course, CoWorking, Gym, Hosting, Photographer, Price-List, Pricing-Comparison, Pricing-Slider, Restaurant, Wellness, Saas-Pricing, Salon).
 * Improvement: Redesigned the Admin Dashboard with a modern Welcome page and a new Blocks Manager to enable or disable specific cards.
 * Improvement: Grouped all plugin blocks under a dedicated "Pricing Table" category in the block inserter.
@@ -243,6 +249,12 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Upgrade Notice ==
+
+= 2.1.2 - 28 June 2026 =  
+* Fix: Shortcode Bug Fixed
+
+= 2.1.1 - 28 June 2026 =  
+* Improvement: Admin Dashboard Updated
 
 = 2.1.0 - 24 June 2026 =
 * New: Added 14 new Pro pricing cards, a new Blocks Manager, dashboard improvements, and several bug fixes.

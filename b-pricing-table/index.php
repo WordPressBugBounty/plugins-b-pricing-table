@@ -1,27 +1,24 @@
 <?php
 
 /**
- * Plugin Name: Pricing Table - Block Pro
+ * Plugin Name: Pricing Table - Block
  * Description: Display product prices as a table
- * Version: 2.1.0
- * Update URI: https://wordpress.org/plugins/b-pricing-table/
+ * Version: 2.1.2
  * Author: bPlugins
  * Author URI: https://bplugins.com
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.txt
  * Text Domain: b-pricing-table
- * @fs_premium_only /vendor/freemius, /includes/admin/LicenseActivation.php, build/blocks/pricing-comparison, build/blocks/price-list, build/blocks/pricing-slider, build/blocks/coupon-box, build/blocks/saas-pricing, build/blocks/hosting-pricing, build/blocks/gym-pricing, build/blocks/course-pricing, build/blocks/agency-pricing, build/blocks/salon-pricing, build/blocks/wellness-pricing, build/blocks/restaurant-pricing, build/blocks/photography-pricing, build/blocks/coworking-pricing 
- * @fs_free_only /vendor/freemius-lite
  */
 // ABS PATH
 if ( !defined( 'ABSPATH' ) ) {
     exit;
 }
 if ( function_exists( 'bptb_fs' ) ) {
-    bptb_fs()->set_basename( true, __FILE__ );
+    bptb_fs()->set_basename( false, __FILE__ );
 } else {
     // Define Constant
-    define( 'BPTB_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '2.1.0' ) );
+    define( 'BPTB_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '2.1.2' ) );
     define( 'BPTB_DIR_URL', plugin_dir_url( __FILE__ ) );
     define( 'BPTB_DIR_PATH', plugin_dir_path( __FILE__ ) );
     define( 'BPTB_HAS_PRO', file_exists( dirname( __FILE__ ) . '/vendor/freemius/start.php' ) );
