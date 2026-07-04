@@ -11,6 +11,7 @@ class BPTB_Shortcode {
 			add_action( 'manage_bptb_posts_custom_column', [$this, 'manageBPTBPostsCustomColumns'], 10, 2 );
 			add_action( 'use_block_editor_for_post', [$this, 'useBlockEditorForPost'], 999, 2 );
 		  add_action( 'admin_enqueue_scripts', [$this, 'adminEnqueueScripts'] );
+			add_filter( 'allowed_block_types_all', [$this, 'filterAllowedBlockTypes'], 10, 2 );
 	}
 
 	function onInit(){
@@ -40,7 +41,7 @@ class BPTB_Shortcode {
 			'rewrite'				=> [ 'slug' => 'bptb' ],
 			'supports'				=> [ 'title', 'editor' ],
 			'template' => [ [ 'bptb/pricing-table' ] ],
-			// 'template_lock'			=> 'all',
+			// 'template_lock'			=> 'all', 
 		] ); // Register Post Type
 	}
 
@@ -118,6 +119,25 @@ class BPTB_Shortcode {
 			wp_enqueue_script( 'bptb-admin-post', BPTB_DIR_URL . 'build/admin-post.js', [], BPTB_VERSION, true );
 			wp_set_script_translations( 'bptb-admin-post', 'b-pricing-table', BPTB_DIR_PATH . 'languages' );
 	  }
+	}
+
+	function filterAllowedBlockTypes( $allowed_block_types, $block_editor_context ) {
+		if ( ! empty( $block_editor_context->post ) && $block_editor_context->post->post_type === $this->post_type ) {
+			
+			$allowed_blocks = [];
+			$registered_blocks = WP_Block_Type_Registry::get_instance()->get_all_registered();
+			
+			foreach ( $registered_blocks as $block_name => $block_type ) {
+				// Allow all blocks starting with 'bptb/' (your 14 blocks)
+				if ( strpos( $block_name, 'bptb/' ) === 0 ) {
+					$allowed_blocks[] = $block_name;
+				}
+			}
+			
+			return $allowed_blocks;
+		}
+
+		return $allowed_block_types;
 	}
 
 }

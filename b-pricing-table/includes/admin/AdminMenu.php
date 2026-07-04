@@ -19,7 +19,7 @@ if( !class_exists( 'BPTBAdminMenu' ) ) {
 				wp_send_json_error( 'Invalid Request' );
 			}
 
-			$data = isset( $_POST['data'] ) ? json_decode( wp_unslash( $_POST['data'] ), true ) : null;
+			$data = isset( $_POST['data'] ) ? json_decode( wp_unslash( $_POST['data'] ), true ) : null; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
 			if ( is_array( $data ) ) {
 				$data = array_values( array_map( 'sanitize_text_field', $data ) );

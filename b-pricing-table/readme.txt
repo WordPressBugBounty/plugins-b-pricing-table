@@ -4,7 +4,7 @@ Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, pricing table, price list, gutenberg-blocks, product pricing
 Requires at least: 6.5+
 Tested up to: 7.0
-Stable tag: 2.1.2
+Stable tag: 2.1.3
 Requires PHP: 7.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html 
@@ -122,8 +122,6 @@ This plugin connects to the following external services from the admin dashboard
 * **Purpose:** Shared utility library providing admin dashboard components and common Gutenberg editor controls.
 * **External Services:** The library may connect to bPlugins, WordPress.org, and Freemius services for product data and checkout functionality. See full details: https://github.com/bPlugins/bpl-tools#external-requests--why-they-are-made
 
-
-
 == Installation ==
 
 = From Gutenberg Editor: =
@@ -182,9 +180,27 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 9. Gutenberg Block
 10. Gutenberg Block Genaral Settings
 11. Gutenberg Block Style Settings
+12. Pricing Comparison Table
+13. Price List Table
+14. Pricing Slider Table
+15. Coupon Box Table
+16. SaaS Pricing Table
+17. Web Hosting Pricing Table
+18. Gym & Fitness Table
+19. Online Course Pricing Table
+20. Agency Pricing Table
+21. Salon & Spa Pricing Table
+22. Wellness Pricing Table
+23. Restaurant & Catering Table
+24. Photography Packages Table
+25. Coworking Space Plans Table
 
 
 == Changelog ==
+
+= 2.1.3 - 4 July 2026 =  
+* Improvement: Optimized the ShortCode editor to exclusively support B-Pricing Table blocks.
+* Update: freemius sdk version updated.
 
 = 2.1.2 - 28 June 2026 =  
 * Fix: Shortcode Bug Fixed
@@ -249,6 +265,9 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Upgrade Notice ==
+
+= 2.1.3 - 4 July 2026 =  
+* Improvement: Optimized the ShortCode editor to exclusively support B-Pricing Table blocks.
 
 = 2.1.2 - 28 June 2026 =  
 * Fix: Shortcode Bug Fixed
