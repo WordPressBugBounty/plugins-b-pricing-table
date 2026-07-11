@@ -4,7 +4,7 @@ Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, pricing table, price list, gutenberg-blocks, product pricing
 Requires at least: 6.5+
 Tested up to: 7.0
-Stable tag: 2.1.3
+Stable tag: 2.1.4
 Requires PHP: 7.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html 
@@ -198,6 +198,10 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 == Changelog ==
 
+= 2.1.4 - 11 July 2026 =  
+* Improvement: Added license activation & license status UI to the dashboard's Settings page.
+* Update: freemius sdk version updated.
+
 = 2.1.3 - 4 July 2026 =  
 * Improvement: Optimized the ShortCode editor to exclusively support B-Pricing Table blocks.
 * Update: freemius sdk version updated.
@@ -265,6 +269,9 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Upgrade Notice ==
+
+= 2.1.4 - 11 July 2026 =  
+* Improvement: Added license activation & license status UI to the dashboard's Settings page.
 
 = 2.1.3 - 4 July 2026 =  
 * Improvement: Optimized the ShortCode editor to exclusively support B-Pricing Table blocks.
