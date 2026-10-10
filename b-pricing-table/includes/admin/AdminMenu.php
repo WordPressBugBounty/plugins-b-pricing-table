@@ -58,13 +58,10 @@ if( !class_exists( 'BPTBAdminMenu' ) ) {
 				id='bptbDashboard'
 				data-info='<?php echo esc_attr( wp_json_encode( [
 					'version' => BPTB_VERSION,
-					'isPremium' => bptbIsPremium(),
-					'hasPro' => BPTB_HAS_PRO,
 					'adminUrl' => admin_url(),
 					'upgradeUrl' => function_exists('fs_get_upgrade_url') ? fs_get_upgrade_url() : '',
 					'licenseActiveNonce' => wp_create_nonce( 'bPlLicenseActivation' ),
-					'disabledBlocksNonce' => wp_create_nonce( 'bptb_disabled_blocks' ),
-					'bptbDisabledBlocks' => get_option( 'bptbDisabledBlocks', [] )
+				
 				] ) ); ?>'
 			></div>
 		<?php }
